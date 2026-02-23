@@ -1,0 +1,18 @@
+# Dependencies
+node_modules/
+
+# Lokálne nástroje (export OG obrázka, dev server)
+export-og-image.js
+server.js
+package-lock.json
+package.json
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Editor / IDE
+.idea/
+.vscode/
+*.swp
+*.swo

@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="sk">
+<head>
+  <meta charset="utf-8">
+  <title>OG Image – KOF BA</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Signika+Negative:wght@600;700&display=swap" rel="stylesheet">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    .card {
+      width: 1200px;
+      height: 630px;
+      position: relative;
+      overflow: hidden;
+      font-family: 'Signika Negative', sans-serif;
+    }
+    .card .bg {
+      position: absolute;
+      inset: 0;
+      background: url('assets/img/organ.jpg') center/cover no-repeat;
+    }
+    .card .overlay {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(105deg, rgba(0,0,0,0.82) 0%, rgba(0,0,0,0.5) 45%, rgba(0,0,0,0.25) 100%);
+    }
+    .card .content {
+      position: relative;
+      z-index: 1;
+      padding: 56px 70px 56px 86px;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      border-left: 6px solid #bba775;
+    }
+    .card .logo-wrap {
+      margin-bottom: 28px;
+    }
+    .card .logo {
+      width: 120px;
+      height: auto;
+      display: block;
+      filter: drop-shadow(0 2px 16px rgba(0,0,0,0.5));
+    }
+    .card h1 {
+      color: #fff;
+      font-size: 54px;
+      font-weight: 700;
+      line-height: 1.12;
+      max-width: 680px;
+      text-shadow: 0 2px 24px rgba(0,0,0,0.55);
+      margin-bottom: 12px;
+      letter-spacing: -0.02em;
+    }
+    .card .line {
+      width: 64px;
+      height: 3px;
+      background: #bba775;
+      margin-bottom: 18px;
+    }
+    .card .sub {
+      color: #cfbb89;
+      font-size: 26px;
+      font-weight: 600;
+      text-shadow: 0 1px 12px rgba(0,0,0,0.4);
+      letter-spacing: 0.02em;
+    }
+  </style>
+</head>
+<body>
+  <div class="card">
+    <div class="bg"></div>
+    <div class="overlay"></div>
+    <div class="content">
+      <div class="logo-wrap">
+        <img src="assets/img/apple-touch-icon.png" alt="" class="logo">
+      </div>
+      <h1>Katedrálny organový festival Bratislava</h1>
+      <div class="line"></div>
+      <p class="sub">Katedrála sv. Martina · 2026</p>
+    </div>
+  </div>
+</body>
+</html>
