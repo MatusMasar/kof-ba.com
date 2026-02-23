@@ -83,13 +83,12 @@
 <!-- ======= Main  ======= -->
 <section id="hero" class="d-flex flex-column justify-content-center">
   <div class="container" data-aos="zoom-in" data-aos-delay="100">
+    <p class="hero-tagline">Katedrála sv. Martina, Bratislava</p>
     <h1>Katedrálny organový festival Bratislava</h1>
-    <p><span class="typed" data-typed-items="Kedy ? <b>24. júl – 11. september 2025</b> <br> Kde ? <b>Katedrála sv. Martina v Bratislave</b> <br> Vstupné ? <b>Dospelí 15€ | Seniori nad 65 rokov, učitelia (ITIC) a študenti (ISIC) 10€ | ZŤP 1€</b> *"></span></p>
+    <div class="hero-line"></div>
+    <p class="hero-typed"><span class="typed" data-typed-items="Kedy ? <b>24. júl – 11. september 2025</b> <br> Kde ? <b>Katedrála sv. Martina v Bratislave</b>"></span></p>
   </div>
-  <p><span class="req"> * Dospelí 15 € | Seniori nad 65 rokov, učitelia (ITIC) a študenti (ISIC) 10 € | ZŤP 1 € - Koncerty: 24.7., 31.7., 7.8., 14.8., 21.8. a 28.8.<br>
-                        Dospelí 20 € | Seniori nad 65 rokov, učitelia (ITIC) a študenti (ISIC) 12 € | ZŤP 1 € - Koncerty: 4.9. a 11.9.<br>
-                        Vstup volný - Koncert 31.8.
-  </span></p>
+  <a href="#about" class="hero-scroll" aria-label="Posunúť nadol"><i class="bx bx-chevron-down"></i></a>
 </section><!-- Koniec Hero -->
 
 <main id="main">
@@ -373,13 +372,30 @@
 
       <div class="section-title">
         <h2>Galéria & Archív</h2>
-        <p>Galériu a archív nájdete po kliknutí na  tlačidlá nižšie.</p>
+        <p class="galeria-archive-intro">Fotografie z koncertov a bulletiny z minulých ročníkov festivalu.</p>
+      </div>
 
-        <div class="buttons d-flex justify-content-center align-items-center">
-            <a href="galeria"><button>Galéria</button></a>
-            <a href="archiv"><button>Archív</button></a>
+      <div class="row galeria-archive-cards justify-content-center g-4">
+        <div class="col-lg-5 col-md-6">
+          <a href="galeria" class="galeria-archive-card galeria-archive-card--gallery">
+            <span class="galeria-archive-card__icon-wrap"><i class="bx bx-photo-album"></i></span>
+            <div class="galeria-archive-card__body">
+              <h3>Galéria</h3>
+              <p>Fotografie z koncertov a umelcov od roku 2010. Prehľad podľa ročníkov.</p>
+              <span class="galeria-archive-card__btn">Otvoriť galériu <i class="bx bx-right-arrow-alt"></i></span>
+            </div>
+          </a>
         </div>
-
+        <div class="col-lg-5 col-md-6">
+          <a href="archiv" class="galeria-archive-card galeria-archive-card--archive">
+            <span class="galeria-archive-card__icon-wrap"><i class="bx bx-box"></i></span>
+            <div class="galeria-archive-card__body">
+              <h3>Archív</h3>
+              <p>Bulletiny a programy z minulých ročníkov. PDF na stiahnutie a video archív.</p>
+              <span class="galeria-archive-card__btn">Otvoriť archív <i class="bx bx-right-arrow-alt"></i></span>
+            </div>
+          </a>
+        </div>
       </div>
 
     </div>
@@ -439,27 +455,54 @@
   </section><!-- Koniec Kontaktu -->
 
   <!-- ======= Vstupenky ======= -->
-  <section id="ticket" class="ticket">
+  <section id="ticket" class="ticket section-bg">
     <div class="container" data-aos="fade-up" data-aos-duration="500">
 
       <div class="section-title">
         <h2>Vstupenky</h2>
-        <h6>Predaj vstupeniek 45 minút pred koncertom na mieste a v sieti</h6>
+        <p class="ticket-intro">Predaj vstupeniek 45 minút pred koncertom na mieste a online na stránke Ticketportal.</p>
       </div>
 
-      <div class="row">
-        <div class="d-flex align-items-center justify-content-center">
-          <a href="https://www.ticketportal.sk/event/KATEDRALNY-ORGANOVY-FESTIVAL-BRATISLAVA-2025" target="_blank"> <img src="assets/img/org_spo/Ticketportal.png" alt=""> </a>
+      <div class="row ticket-cards g-4 justify-content-center">
+        <div class="col-lg-4 col-md-6">
+          <div class="ticket-card" data-aos="fade-up" data-aos-duration="500">
+            <h3 class="ticket-card__title">Štandardné koncerty</h3>
+            <p class="ticket-card__dates">24.7., 31.7., 7.8., 14.8., 21.8., 28.8.</p>
+            <ul class="ticket-card__pricing">
+              <li>Dospelí <strong>15 €</strong></li>
+              <li>Seniori 65+, učitelia (ITIC), študenti (ISIC) <strong>10 €</strong></li>
+              <li>ZŤP <strong>1 €</strong></li>
+            </ul>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-6">
+          <div class="ticket-card ticket-card--highlight" data-aos="fade-up" data-aos-duration="500" data-aos-delay="100">
+            <h3 class="ticket-card__title">Gala koncerty</h3>
+            <p class="ticket-card__dates">4.9., 11.9.</p>
+            <ul class="ticket-card__pricing">
+              <li>Dospelí <strong>20 €</strong></li>
+              <li>Seniori 65+, učitelia (ITIC), študenti (ISIC) <strong>12 €</strong></li>
+              <li>ZŤP <strong>1 €</strong></li>
+            </ul>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-6">
+          <div class="ticket-card" data-aos="fade-up" data-aos-duration="500" data-aos-delay="200">
+            <h3 class="ticket-card__title">Koncert v arcidiecéze</h3>
+            <p class="ticket-card__dates">31.8. – 15:00, Kostol sv. Margity, Lamač</p>
+            <p class="ticket-card__free">Vstup voľný</p>
+          </div>
         </div>
       </div>
 
-      <!-- <div class="row">
-        <div class="d-flex align-items-center justify-content-center">
-          <a id="ticketButton"><img src="assets/img/org_spo/Ticketportal.png" alt=""> </a>
-        </div>
-      </div> -->
+      <div class="ticket-cta">
+        <a href="https://www.ticketportal.sk/event/KATEDRALNY-ORGANOVY-FESTIVAL-BRATISLAVA-2025" target="_blank" rel="noopener" class="ticket-btn">
+          <span class="ticket-btn__logo"><img src="assets/img/org_spo/Ticketportal.png" alt="Ticketportal"></span>
+          <span class="ticket-btn__text">Zakúpiť vstupenky online</span>
+        </a>
+      </div>
 
-   </div>
+    </div>
   </section><!-- Koniec Vstupenky -->
 
   <!-- ======= Organizátori ======= -->

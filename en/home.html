@@ -83,13 +83,12 @@
 <!-- ======= Main  ======= -->
 <section id="hero" class="d-flex flex-column justify-content-center">
   <div class="container" data-aos="zoom-in" data-aos-delay="100">
+    <p class="hero-tagline">St. Martin's Cathedral, Bratislava</p>
     <h1>Cathedral Organ Festival Bratislava</h1>
-    <p><span class="typed" data-typed-items="When ? <b>18th July – 12th September 2025</b> <br> Where ? <b>St. Martin's Cathedral, Bratislava</b> <br> Entrance fee ? <b>Adults 15€ | Seniors over 65 years old, teachers (ITIC) and students (ISIC) 10€ | Severely disabled 1€</b> *"></span></p>
+    <div class="hero-line"></div>
+    <p class="hero-typed"><span class="typed" data-typed-items="When ? <b>18th July – 12th September 2025</b> <br> Where ? <b>St. Martin's Cathedral, Bratislava</b>"></span></p>
   </div>
-  <p><span class="req"> * Adults 15 € | Seniors over 65 years old, teachers (ITIC) and students (ISIC) 10 € | Severely disabled 1 € - Concerts: 24.7., 31.7, 7.8., 14.8., 21.8. and 28.8.<br>
-                        Adults 20 € | Seniors over 65 years old, teachers (ITIC) and students (ISIC) 12 € | Severely disabled 1 € - Concert: 4.9. and 11.9.<br>
-                        Free entrance - Concert 31.8.
-  </span></p>
+  <a href="#about" class="hero-scroll" aria-label="Scroll down"><i class="bx bx-chevron-down"></i></a>
 </section><!-- Koniec Hero -->
 
 <main id="main">
@@ -370,23 +369,40 @@
     </div>
   </section> <!-- Koniec Organ -->
 
-  <!-- ======= Galéria & Archív ======= -->
+  <!-- ======= Gallery & Archive ======= -->
   <section id="galeria-archive" class="galeria-archive section-bg">
-    <div class="container" data-aos="fade-up">
+    <div class="container" data-aos="fade-up" data-aos-duration="500">
 
       <div class="section-title">
         <h2>Gallery & Archive</h2>
-        <p>Gallery and archive can be found after clicking on buttons below.</p>
+        <p class="galeria-archive-intro">Photos from concerts and bulletins from past festival editions.</p>
+      </div>
 
-        <div class="buttons d-flex justify-content-center align-items-center">
-            <a href="/en/gallery"><button>Gallery</button></a>
-            <a href="/en/archive"><button>Archive</button></a>
+      <div class="row galeria-archive-cards justify-content-center g-4">
+        <div class="col-lg-5 col-md-6">
+          <a href="/en/gallery" class="galeria-archive-card galeria-archive-card--gallery">
+            <span class="galeria-archive-card__icon-wrap"><i class="bx bx-photo-album"></i></span>
+            <div class="galeria-archive-card__body">
+              <h3>Gallery</h3>
+              <p>Photos from concerts and artists since 2010. Browse by year.</p>
+              <span class="galeria-archive-card__btn">Open gallery <i class="bx bx-right-arrow-alt"></i></span>
+            </div>
+          </a>
         </div>
-
+        <div class="col-lg-5 col-md-6">
+          <a href="/en/archive" class="galeria-archive-card galeria-archive-card--archive">
+            <span class="galeria-archive-card__icon-wrap"><i class="bx bx-box"></i></span>
+            <div class="galeria-archive-card__body">
+              <h3>Archive</h3>
+              <p>Bulletins and programmes from past editions. PDF download and video archive.</p>
+              <span class="galeria-archive-card__btn">Open archive <i class="bx bx-right-arrow-alt"></i></span>
+            </div>
+          </a>
+        </div>
       </div>
 
     </div>
-  </section><!-- Koniec Galérie & Archívu -->
+  </section><!-- Koniec Gallery & Archive -->
 
   <!-- ======= Kontakt ======= -->
   <section id="contact" class="contact">
@@ -441,29 +457,56 @@
     </div>
   </section><!-- Koniec Kontaktu -->
 
-  <!-- ======= Vstupenky ======= -->
-  <section id="ticket" class="ticket">
-    <div class="container" data-aos="fade-up">
+  <!-- ======= Tickets ======= -->
+  <section id="ticket" class="ticket section-bg">
+    <div class="container" data-aos="fade-up" data-aos-duration="500">
 
       <div class="section-title">
         <h2>Tickets</h2>
-        <h6>Ticket sales 45 minutes before the concert at the venue and online</h6>
+        <p class="ticket-intro">Ticket sales 45 minutes before the concert at the venue and online at Ticketportal.</p>
       </div>
 
-      <div class="row">
-        <div class="d-flex align-items-center justify-content-center">
-          <a href="https://www.ticketportal.sk/event/KATEDRALNY-ORGANOVY-FESTIVAL-BRATISLAVA-2025" target="_blank"> <img src="../assets/img/org_spo/Ticketportal.png" alt=""> </a>
+      <div class="row ticket-cards g-4 justify-content-center">
+        <div class="col-lg-4 col-md-6">
+          <div class="ticket-card" data-aos="fade-up" data-aos-duration="500">
+            <h3 class="ticket-card__title">Standard concerts</h3>
+            <p class="ticket-card__dates">24.7., 31.7., 7.8., 14.8., 21.8., 28.8.</p>
+            <ul class="ticket-card__pricing">
+              <li>Adults <strong>15 €</strong></li>
+              <li>Seniors 65+, teachers (ITIC), students (ISIC) <strong>10 €</strong></li>
+              <li>Severely disabled <strong>1 €</strong></li>
+            </ul>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-6">
+          <div class="ticket-card ticket-card--highlight" data-aos="fade-up" data-aos-duration="500" data-aos-delay="100">
+            <h3 class="ticket-card__title">Gala concerts</h3>
+            <p class="ticket-card__dates">4.9., 11.9.</p>
+            <ul class="ticket-card__pricing">
+              <li>Adults <strong>20 €</strong></li>
+              <li>Seniors 65+, teachers (ITIC), students (ISIC) <strong>12 €</strong></li>
+              <li>Severely disabled <strong>1 €</strong></li>
+            </ul>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-6">
+          <div class="ticket-card" data-aos="fade-up" data-aos-duration="500" data-aos-delay="200">
+            <h3 class="ticket-card__title">Archdiocese concert</h3>
+            <p class="ticket-card__dates">31.8. – 15:00, St. Margaret's Church, Lamač</p>
+            <p class="ticket-card__free">Free entrance</p>
+          </div>
         </div>
       </div>
 
-      <!-- <div class="row">
-        <div class="d-flex align-items-center justify-content-center">
-          <a id="ticketButton"><img src="../assets/img/org_spo/Ticketportal.png" alt=""> </a>
-        </div>
-      </div> -->
+      <div class="ticket-cta">
+        <a href="https://www.ticketportal.sk/event/KATEDRALNY-ORGANOVY-FESTIVAL-BRATISLAVA-2025" target="_blank" rel="noopener" class="ticket-btn">
+          <span class="ticket-btn__logo"><img src="../assets/img/org_spo/Ticketportal.png" alt="Ticketportal"></span>
+          <span class="ticket-btn__text">Buy tickets online</span>
+        </a>
+      </div>
 
     </div>
-  </section><!-- Koniec Vstupenky -->
+  </section><!-- Koniec Tickets -->
 
   <!-- ======= Organizátori ======= -->
   <section id="organizator" class="organizator">
