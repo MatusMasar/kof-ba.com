@@ -1,4 +1,9 @@
 RewriteEngine on
+# Anglická domovská: /en a /en/ zobrazia en/home.html
+RewriteRule ^en/?$ en/home.html [L]
+# Presmerovanie starých odkazov /en/home na /en
+RewriteRule ^en/home/?$ /en [R=301,L]
+
 RewriteCond %{REQUEST_FILENAME} !-d
 RewriteCond %{REQUEST_FILENAME}\.html -f
 RewriteRule ^(.*)$ $1.html [NC,L]
