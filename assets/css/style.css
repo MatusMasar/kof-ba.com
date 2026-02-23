@@ -1,0 +1,842 @@
+/*--------------------------------------------------------------
+# Scrollbar
+--------------------------------------------------------------*/
+@media (min-width: 992px) {
+  ::-webkit-scrollbar {
+    width: 15px !important;
+  }
+  ::-webkit-scrollbar-track {
+    background: transparent;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: #bba775;
+    background-clip: content-box !important;
+    border: 4px solid transparent !important;
+    border-radius: 8px !important;
+  }
+  ::-webkit-scrollbar-track-piece {
+    background: transparent;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background-color: rgba(207, 187, 137);
+    transition: all 1s ease;
+  }
+}
+/*--------------------------------------------------------------
+# General
+--------------------------------------------------------------*/
+* {
+  scroll-behavior: smooth;
+}
+body {
+  font-family: 'Signika Negative', sans-serif !important;
+  color: #565759;
+  background-color: #fff;
+  overflow: overlay;
+}
+a {
+  color: #565759;
+  text-decoration: none;
+}
+a:hover {
+  color: rgba(207, 187, 137);
+  text-decoration: none;
+}
+hr {
+  background-color: #bba775;
+}
+/*--------------------------------------------------------------
+# Back to top button
+--------------------------------------------------------------*/
+.back-to-top {
+  position: fixed;
+  visibility: hidden;
+  opacity: 0;
+  right: 15px;
+  bottom: 15px;
+  z-index: 996;
+  background: #bba775;
+  width: 38px;
+  height: 38px;
+  border-radius: 10px;
+  transition: all 0.4s;
+}
+.back-to-top i {
+  font-size: 22px;
+  color: #fff;
+  line-height: 0;
+}
+.back-to-top:hover {
+  background-color: rgba(207, 187, 137);
+  color: #fff;
+}
+.back-to-top.active {
+  visibility: visible;
+  opacity: 1;
+}
+/*--------------------------------------------------------------
+# Preloader
+--------------------------------------------------------------*/
+#preloader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 9999;
+  overflow: hidden;
+  background: #fff;
+}
+#preloader:before {
+  content: "";
+  position: fixed;
+  top: calc(50% - 30px);
+  left: calc(50% - 30px);
+  border: 6px solid #bba775;
+  border-top-color: #fff;
+  border-bottom-color: #fff;
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  -webkit-animation: animate-preloader 1s linear infinite;
+  animation: animate-preloader 1s linear infinite;
+}
+@-webkit-keyframes animate-preloader {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+@keyframes animate-preloader {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+/*--------------------------------------------------------------
+# Disable aos animation delay on mobile devices
+--------------------------------------------------------------*/
+@media screen and (max-width: 768px) {
+  [data-aos-delay] {
+    transition-delay: 0s !important;
+  }
+}
+/*--------------------------------------------------------------
+# Header
+--------------------------------------------------------------*/
+#header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  z-index: 9997;
+  transition: all 0.5s;
+  padding: 15px;
+  overflow-y: auto;
+}
+@media (max-width: 992px) {
+  #header {
+    background: #fff;
+    left: -550px;
+  }
+}
+@media (min-width: 992px) {
+  .mobile-nav-toggle {
+    display: none;
+  }
+}
+/*--------------------
+# Navigation Menu
+--------------------*/
+/*
+ * Desktop Navigation
+ */
+.nav-menu {
+  padding: 0;
+  display: block;
+}
+.nav-menu * {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.nav-menu > ul > li {
+  position: relative;
+  white-space: nowrap;
+}
+.nav-menu a, .nav-menu a:focus {
+  display: flex;
+  align-items: center;
+  color: #565759;
+  padding: 0 11px;
+  margin-bottom: 8px;
+  transition: 0.3s;
+  font-size: 13px;
+  border-radius: 10px;
+  background: #f2f3f5;
+  height: 42px;
+  overflow: hidden;
+}
+.nav-menu a i, .nav-menu a:focus i {
+  font-size: 20px;
+}
+.nav-menu a span, .nav-menu a:focus span {
+  padding: 0 5px 0 7px;
+  color: #565759;
+}
+@media (min-width: 992px) {
+  .nav-menu a, .nav-menu a:focus {
+    width: 42px;
+  }
+  .nav-menu a span, .nav-menu a:focus span {
+    display: none;
+    color: #fff;
+  }
+}
+.nav-menu a:hover, .nav-menu .active, .nav-menu .active:focus, .nav-menu li:hover > a {
+  color: #fff;
+  background: #bba775;
+}
+.nav-menu a:hover span, .nav-menu .active span, .nav-menu .active:focus span, .nav-menu li:hover > a span {
+  color: #ffffff;
+}
+.nav-menu a:hover, .nav-menu li:hover > a {
+  width: 100%;
+  color: #fff;
+}
+.nav-menu a:hover span, .nav-menu li:hover > a span {
+  display: block;
+}
+/*
+ * Switch language
+ */
+.nav-menu img {
+  position: absolute;
+  overflow: overlay;
+  width: 20px;
+  left: 11px;
+}
+.nav-menu .lang {
+  margin-left: 20px;
+}
+.nav-menu .li-lang {
+  position: fixed;
+  bottom: 7px; !important;
+}
+@media (max-width: 992px) {
+  .nav-menu .li-lang {
+    position: relative; !important;
+    bottom: 0;
+  }
+}
+/*
+ * Mobile Navigation
+ */
+.mobile-nav-toggle {
+  position: fixed;
+  right: 10px;
+  top: 10px;
+  z-index: 9998;
+  border: 0;
+  background: none;
+  font-size: 28px;
+  transition: all 0.4s;
+  outline: none !important;
+  line-height: 0;
+  cursor: pointer;
+  border-radius: 10px;
+  height: 42px;
+  width: 42px;
+  padding: 7px;
+}
+.mobile-nav-toggle i {
+  color: #565759;
+}
+.mobile-nav-active {
+  overflow: hidden;
+}
+.mobile-nav-active #header {
+  left: 0;
+}
+.mobile-nav-active .mobile-nav-toggle {
+  color: #fff;
+  background-color: #bba775;
+}
+/*--------------------------------------------------------------
+# Hero Section
+--------------------------------------------------------------*/
+#hero {
+  width: 100%;
+  height: 100vh;
+  background-color: #ffffff;
+  position: relative;
+}
+@media (min-width: 991px) {
+  #hero {
+    padding-left: 160px;
+  }
+}
+#hero:before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  top: 0;
+  left: 0;
+  right: 0;
+}
+#hero h1 {
+  margin: 0;
+  font-size: 64px;
+  font-weight: 700;
+  line-height: 56px;
+  color: #bba775;
+}
+#hero p {
+  margin: 15px 0 0 0;
+  font-size: 26px;
+}
+
+#hero p span {
+  color: #565759;
+  letter-spacing: 1px;
+}
+@media (max-width: 992px) {
+  #hero {
+    text-align: center;
+  }
+  #hero h1 {
+    font-size: 32px;
+    line-height: 36px;
+  }
+  #hero p {
+    margin-top: 10px;
+    font-size: 20px;
+    line-height: 24px;
+  }
+}
+.req {
+  font-size: 15px;
+  text-align: right;
+  position: absolute;
+  bottom: 15px;
+  right: 15px;
+}
+@media (max-width: 992px) {
+  .req{
+    padding-left: 30px;
+    font-size: 11px;
+  }
+}
+/*--------------------------------------------------------------
+# Sections General
+--------------------------------------------------------------*/
+section {
+  padding: 30px 150px;
+  overflow: hidden;
+}
+.section-title {
+  text-align: center;
+}
+.section-title h2 {
+  font-size: 32px;
+  font-weight: bold;
+  text-transform: uppercase;
+  padding-bottom: 20px;
+  position: relative;
+  color: #bba775;
+}
+.section-title h2::before {
+  content: "";
+  position: absolute;
+  display: block;
+  width: 120px;
+  height: 1px;
+  background: #ddd;
+  bottom: 1px;
+  left: calc(50% - 60px);
+}
+.section-title h2::after {
+  content: "";
+  position: absolute;
+  display: block;
+  width: 40px;
+  height: 3px;
+  background: #bba775;
+  bottom: 0;
+  left: calc(50% - 20px);
+}
+.section-title p {
+  margin-bottom: 0;
+}
+@media screen and (max-width: 991px) {
+  section {
+    padding: 30px 15px;
+  }
+}
+/*--------------------------------------------------------------
+# Informácie
+--------------------------------------------------------------*/
+video .videjko {
+  color: white;
+}
+/*--------------------------------------------------------------
+# Informácie
+--------------------------------------------------------------*/
+.about {
+  background-color: #fafafa;
+}
+.about .content h3 {
+  font-weight: 700;
+  font-size: 26px;
+  color: #728394;
+}
+.about .content p:last-child {
+  margin-bottom: 0;
+}
+.p-citat {
+  text-align: right;
+}
+/*--------------------------------------------------------------
+# Program
+--------------------------------------------------------------*/
+.resume .resume-title {
+  font-size: 26px;
+  font-weight: 700;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  color: #565759;
+}
+.resume .resume-item {
+  padding: 10px 0 10px 20px;
+  border-left: 2px solid #bba775;
+  position: relative;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+.resume .resume-item h4 {
+  line-height: 18px;
+  font-size: 18px;
+  font-weight: 600;
+  text-transform: uppercase;
+  color: #bba775;
+  margin-bottom: 10px;
+}
+.resume .resume-item h5 {
+  font-size: 16px;
+  background: rgba(187, 167, 117, 0.5);
+  padding: 5px 15px;
+  display: inline-block;
+  border-radius: 10px;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+.resume .resume-item h6 {
+  font-size: 14px;
+  font-weight: 600;
+  text-transform: uppercase;
+  color: #565759;
+  margin-bottom: 10px;
+}
+.resume p {
+  margin: 0; !important;
+  padding: 0; !important;
+}
+.resume .resume-item::before {
+  content: "";
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  border-radius: 5px;
+  left: -9px;
+  top: 0;
+  background: #fff;
+  border: 2px solid #bba775;
+}
+.bull-ster {
+  margin: 0 15px 0 15px;
+}
+/*--------------------------------------------------------------
+# Hotel
+--------------------------------------------------------------*/
+.hotel {
+  background-color: #fafafa;
+}
+.hotel .hotel-img {
+  margin: 10px 0 0 0;
+}
+.hotel img {
+  border-radius: 10px;
+}
+.hotel img:hover {
+  transform: scale(1.09);
+  transition: all 0.5s;
+}
+/*--------------------------------------------------------------
+# Organ
+--------------------------------------------------------------*/
+.organ .organ-img {
+  margin: 30px;
+}
+.organ img {
+  border-radius: 10px;
+}
+.organ img:hover {
+  transform: scale(1.09);
+  transition: all 0.5s;
+}
+.organ button {
+  background: #bba775;
+  border: 0;
+  padding: 10px 35px;
+  color: #fff;
+  transition: 0.4s;
+  border-radius: 10px;
+  align-items: center;
+}
+.organ button:hover {
+  background-color: rgba(207, 187, 137);
+}
+/*--------------------------------------------------------------
+# Tech-details
+--------------------------------------------------------------*/
+.tech-title {
+  text-align: center;
+}
+.tech-title h3 {
+  font-size: 26px;
+  font-weight: bold;
+  text-transform: uppercase;
+  position: relative;
+  color: #bba775;
+}
+.tech-title p {
+  margin-bottom: 0;
+  text-align: left;
+}
+.tech-title .table {
+  border-collapse: collapse;
+}
+.tech-title th, td {
+  border: 1px solid black;
+}
+.tech-title th, td {
+  padding: 5px;
+}
+/*--------------------------------------------------------------
+# Galéria
+--------------------------------------------------------------*/
+.galeria-archive {
+  background-color: #fafafa;
+}
+.galeria .galeria-item {
+  margin-bottom: 30px;
+}
+.galeria img {
+  transition: 0.3s;
+  border-radius: 10px;
+}
+.galeria img:hover {
+    transform:  scale(1.09);
+}
+.galeria #galeria-flters {
+  margin: 0 auto 25px auto;
+  list-style: none;
+  text-align: center;
+  background: #fff;
+  border-radius: 50px;
+  padding: 2px 15px;
+}
+.galeria #galeria-flters li {
+  cursor: pointer;
+  display: inline-block;
+  padding: 10px 15px;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 1;
+  color: #272829;
+  margin-bottom: 5px;
+  transition: all 0.3s ease-in-out;
+}
+.galeria #galeria-flters li:hover, .galeria #galeria-flters li.filter-active {
+  color: #bba775;
+}
+.galeria #galeria-flters li:last-child {
+  margin-right: 0;
+}
+/*--------------------------------------------------------------
+# Archív
+--------------------------------------------------------------*/
+.archive .archive-item {
+  margin-bottom: 30px;
+}
+.archive img {
+  transition: 0.3s;
+  border-radius: 10px;
+}
+.archive img:hover {
+  transform:  scale(1.09);
+}
+.archive h5 {
+  text-align: center;
+}
+.body-archive {
+  background-color: #fafafa;
+}
+/*--------------------------------------------------------------
+# Galéria-Archív
+--------------------------------------------------------------*/
+.galeria-archive a {
+  align-items: center;
+  margin: 10px;
+}
+.galeria-archive button {
+  background: #bba775;
+  border: 0;
+  padding: 10px 35px;
+  color: #fff;
+  transition: 0.4s;
+  border-radius: 10px;
+  align-items: center;
+}
+.galeria-archive button:hover {
+  background-color: rgba(207, 187, 137);
+}
+/*--------------------------------------------------------------
+# Kontakt
+--------------------------------------------------------------*/
+.contact .info {
+  width: 100%;
+}
+@media (min-width: 992px) {
+  .contact .info i {
+    font-size: 20px;
+    color: #565759;
+    float: left;
+    width: 44px;
+    height: 44px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    transition: all 0.3s ease-in-out;
+  }
+  .contact .info h4 {
+    padding: 0 0 0 60px;
+    font-size: 22px;
+    font-weight: 600;
+    margin-bottom: 5px;
+    color: #565759;
+  }
+  .contact .info p {
+    padding: 0 0 0 60px;
+    margin-bottom: 0;
+    font-size: 14px;
+    color: #565759;
+  }
+}
+.contact .info .email, .contact .info, .contact .address  {
+  margin-top: 30px;
+}
+.contact .info .email:hover i, .contact .info .address:hover i {
+  background: #bba775;
+}
+.contact .mapa {
+  margin: auto;
+  justify-items: center;
+}
+.contact .col-lg-4 {
+  margin: auto;
+  justify-items: center;
+}
+@media (max-width: 992px) {
+  .contact .info {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 0; !important;
+  }
+  .contact .info i  {
+    font-size: 20px;
+    color: #565759;
+    width: 44px;
+    height: 44px;
+    border-radius: 10px;
+    transition: all 0.3s ease-in-out;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .contact .info a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .contact .info h4 {
+    padding: 0;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    font-size: 22px;
+    font-weight: 600;
+    color: #565759;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .contact .info p {
+    padding: 0;
+    margin-bottom: 0;
+    font-size: 14px;
+    color: #565759;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .contact .address, .contact .email {
+    margin: 0; !important;
+  }
+}
+/*--------------------------------------------------------------
+# Vstupenky
+--------------------------------------------------------------*/
+.ticket {
+  background-color: #fafafa;
+}
+.ticket a:hover {
+  transform: scale(1.15);
+  transition: all 0.35s ;
+}
+/*--------------------------------------------------------------
+# Organizatori
+--------------------------------------------------------------*/
+.organizator {
+  text-align: center;
+}
+.organizator img {
+  transition: all 0.35s ease-in-out;
+  display: inline-block;
+  margin-bottom: 20px;
+}
+.organizator img:hover {
+  transform: scale(1.5);
+}
+.organizator .column {
+  width: 90px;
+  padding: 10px;
+}
+/*--------------------------------------------------------------
+# Footer
+--------------------------------------------------------------*/
+#footer {
+  background: #565759;
+  color: #fff;
+  font-size: 14px;
+  text-align: center;
+  padding: 10px 0 5px 0;
+}
+#footer h3 {
+  font-size: 36px;
+  font-weight: 700;
+  position: relative;
+  padding: 0;
+  margin: 0 0 10px 0;
+  color: #bba775;
+}
+#footer p {
+  font-size: 15px;
+  font-style: italic;
+  padding: 0;
+  margin: 0 0 10px 0;
+}
+#footer .social-links {
+  margin: 0 0 10px 0;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+}
+#footer .social-links a {
+  font-size: 20px;
+  margin-right: 6px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #bba775;
+  color: #fff;
+  line-height: 1;
+  border-radius: 10px;
+  text-align: center;
+  width: 38px;
+  height: 38px;
+  transition: 0.3s;
+}
+#footer .social-links a:hover {
+  background-color: rgba(207, 187, 137);
+  color: #fff;
+  text-decoration: none;
+}
+#footer .credits {
+  font-size: 13px;
+}
+#footer a {
+  color: #fff;
+}
+#footer a:hover {
+  color: #bba775;
+  transition: all 0.3s;
+}
+
+
+
+/* Pozadie s rozmazaním */
+.popup-overlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  backdrop-filter: blur(4px);
+  background-color: rgba(0, 0, 0, 0.4);
+  z-index: 9998;
+}
+
+/* Samotný popup */
+.popup-container {
+  display: none;
+  position: fixed;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: #ffffff;
+  padding: 20px 30px;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+  text-align: center;
+  z-index: 9999;
+  max-width: 90%;
+  width: 400px;
+}
+
+/* Prechodový efekt na zobrazenie (voliteľné) */
+.popup-container.show,
+.popup-overlay.show {
+  display: block;
+}
+
+.btn-ticket {
+  background-color: #bba775;
+  color: white;
+  border: none;
+  border-radius: 30px;
+  padding: 10px 20px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.btn-ticket:hover {
+  background-color: rgba(207, 187, 137, 1); 
+}
