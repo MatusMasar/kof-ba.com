@@ -1,0 +1,13 @@
+{
+  "rewrites": [
+    { "source": "/en", "destination": "/en/home.html" },
+    { "source": "/en/", "destination": "/en/home.html" },
+    { "source": "/archiv", "destination": "/archiv.html" },
+    { "source": "/galeria", "destination": "/galeria.html" },
+    { "source": "/en/archive", "destination": "/en/archive.html" },
+    { "source": "/en/gallery", "destination": "/en/gallery.html" }
+  ],
+  "redirects": [
+    { "source": "/en/home", "destination": "/en", "permanent": true }
+  ]
+}
