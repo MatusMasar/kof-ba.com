@@ -253,19 +253,65 @@
   const overlay = document.getElementById('popupOverlay');
   const closeButton = document.getElementById('closePopupButton');
 
-  ticketButton.addEventListener('click', function(e) {
-    e.preventDefault();
-    popup.style.display = 'block';
-    overlay.style.display = 'block';
-  });
+  if (ticketButton && popup && overlay && closeButton) {
+    ticketButton.addEventListener('click', function(e) {
+      e.preventDefault();
+      popup.style.display = 'block';
+      overlay.style.display = 'block';
+    });
+    closeButton.addEventListener('click', function() {
+      popup.style.display = 'none';
+      overlay.style.display = 'none';
+    });
+    overlay.addEventListener('click', function() {
+      popup.style.display = 'none';
+      overlay.style.display = 'none';
+    });
+  }
 
-  closeButton.addEventListener('click', function() {
-    popup.style.display = 'none';
-    overlay.style.display = 'none';
-  });
+  /**
+   * Contact email: copy to clipboard and show toast
+   */
+  const copyToast = document.getElementById('copy-toast');
+  const copyLinks = document.querySelectorAll('.contact-email-copy');
+  let copyToastTimeout = null;
 
-  overlay.addEventListener('click', function() {
-    popup.style.display = 'none';
-    overlay.style.display = 'none';
-  });
+  if (copyToast && copyLinks.length) {
+    copyLinks.forEach(function(link) {
+      link.addEventListener('click', function(e) {
+        e.preventDefault();
+        const email = this.getAttribute('data-email') || this.textContent.trim();
+        if (navigator.clipboard && navigator.clipboard.writeText) {
+          navigator.clipboard.writeText(email).then(function() {
+            copyToast.classList.add('is-visible');
+            if (copyToastTimeout) clearTimeout(copyToastTimeout);
+            copyToastTimeout = setTimeout(function() {
+              copyToast.classList.remove('is-visible');
+              copyToastTimeout = null;
+            }, 2500);
+          }).catch(function() {
+            copyToast.classList.add('is-visible');
+            if (copyToastTimeout) clearTimeout(copyToastTimeout);
+            copyToastTimeout = setTimeout(function() {
+              copyToast.classList.remove('is-visible');
+              copyToastTimeout = null;
+            }, 2500);
+          });
+        } else {
+          var input = document.createElement('input');
+          input.setAttribute('value', email);
+          document.body.appendChild(input);
+          input.select();
+          document.execCommand('copy');
+          document.body.removeChild(input);
+          copyToast.classList.add('is-visible');
+          if (copyToastTimeout) clearTimeout(copyToastTimeout);
+          copyToastTimeout = setTimeout(function() {
+            copyToast.classList.remove('is-visible');
+            copyToastTimeout = null;
+          }, 2500);
+        }
+      });
+    });
+  }
 });

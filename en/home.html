@@ -58,6 +58,11 @@
 
 <body>
 
+<!-- Copy-toast popup -->
+<div id="copy-toast" class="copy-toast" aria-live="polite">
+  <span class="copy-toast__text">Email address copied to clipboard.</span>
+</div>
+
 <!-- ======= Mobile nav toggle button ======= -->
 <i class="bi bi-list mobile-nav-toggle d-xl-none"></i>
 
@@ -86,7 +91,7 @@
     <p class="hero-tagline">St. Martin's Cathedral, Bratislava</p>
     <h1>Cathedral Organ Festival Bratislava</h1>
     <div class="hero-line"></div>
-    <p class="hero-typed"><span class="typed" data-typed-items="When ? <b>18th July – 12th September 2025</b> <br> Where ? <b>St. Martin's Cathedral, Bratislava</b>"></span></p>
+    <p class="hero-date">30th July – 10th September 2026</p>
   </div>
   <a href="#about" class="hero-scroll" aria-label="Scroll down"><i class="bx bx-chevron-down"></i></a>
 </section><!-- Koniec Hero -->
@@ -106,17 +111,15 @@
   <!-- ======= Informácie  ======= -->
   <section id="about" class="about">
     <div class="container" data-aos="fade-up">
-
       <div class="section-title">
         <h2>Information</h2>
-        <p>The Bratislava Cathedral Organ Festival began its history in 2010, when a new organ by Gerald Woehl was built in St Martin’s Cathedral. The founder of the festival, as well as the initiator and manager of the construction of the cathedral organ, is the organist Stanslav Šurin. Since its beginning, this festival has been held under the auspices of His Excellency Msgr. Stanislav Zvolenský, metropolitan archbishop.</p>
-        <div class="row">
-          <div>
-            <hr>
-          </div>
+      </div>
+      <div class="about-content">
+        <p class="about-intro">The Bratislava Cathedral Organ Festival began its history in 2010, when a new organ by Gerald Woehl was built in St Martin’s Cathedral. The founder of the festival, as well as the initiator and manager of the construction of the cathedral organ, is the organist Stanslav Šurin. Since its beginning, this festival has been held under the auspices of His Excellency Msgr. Stanislav Zvolenský, metropolitan archbishop.</p>
+        <blockquote class="about-quote">
           <p>„Our meetings with organ music are an opportunity for us to perceive in community our human dignity before God also through authors, performers, musical instrument and receptive listeners of precious works of art. Thank you for accepting the invitation to our Cathedral Organ Festival and enriching us with your presence.”</p>
-          <p class="p-citat"><b>Msgr. Stanislav Zvolenský</b></p>
-        </div>
+          <cite>Msgr. Stanislav Zvolenský</cite>
+        </blockquote>
       </div>
     </div>
   </section><!-- Koniec Informácií -->
@@ -127,119 +130,82 @@
 
       <div class="section-title">
         <h2>Programme</h2>
-
-        <p>Under the auspices of His Excellency Msgr. Stanislav Zvolenský, metropolitan archbishop.</p>
-        <p><b>Supported using public funding by Slovak Arts Council</b></p>
+        <p class="resume-subtitle">Under the auspices of His Excellency Msgr. Stanislav Zvolenský, metropolitan archbishop.</p>
+        <p class="resume-funding"><b>Supported using public funding by Slovak Arts Council</b></p>
       </div>
 
-      <div class="row d-flex">
+      <div class="programme-list row">
 
-        <div class="col-lg-6">
+        <div class="col-lg-6 col-programme">
+          <article class="programme-card">
+            <h4>Accordion and Organ Concert</h4>
+            <h6>MARIE-ANDRÉE JOERGER | accordion FR |; VINCENT DUBOIS | organ FR |</h6>
+            <p class="programme-meta"><time>July 30</time> 7:30 PM</p>
+            <p class="programme-venue"><em>St. Martin's Cathedral, Bratislava</em></p>
+          </article>
 
-          <div class="resume-item">
-            <h4>A DIALOGUE OF STRINGS AND WIND</h4>
-            <h6>MARIA PERUCKA | violin PL |; ROMAN PERUCKI | organ PL |</h6>
-            <h5>July 24 - 7:30 PM</h5>
-            <p><em>St. Martin's Cathedral, Bratislava</em></p>
-            <p>M. J. S. Bach, J. Paderewski, M. Surzyński, F. Borowski, J. Langlais, E. Schneider</p>
-          </div>
-          
-          <div class="resume-item">
-            <h4>CHURCH AND CONCERT ORGAN MUSIC</h4>
-            <h6>ROBERTO PADOIN | IT |</h6>
-            <h5>July 31 - 7:30 PM</h5>
-            <p><em>St. Martin's Cathedral, Bratislava</em></p>
-            <p>A. Tinazzoli, J. S. Bach, W. A. Mozart, G. Morandi, F. Mendelssohn-Bartholdy, C. Franck, A. Guilmant, M. E. Bossi</p>
-          </div>
-          
-          <div class="resume-item">
-            <h4>POETRY AND VIRTUOSITY</h4>
-            <h6>GAIL ARCHER | USA |</h6>
-            <h5>August 7 - 7:30 PM</h5>
-            <p><em>St. Martin's Cathedral, Bratislava</em></p>
-            <p>J. S. Bach, F. Mendelssohn-Hensel, F. Liszt, R. Schumann, J. Brahms</p>
-          </div>
-          
-          <div class="resume-item">
-            <h4>WACHET AUF, RUFT UNS DIE STIMME</h4>
-            <h6>ANDREAS JOST | CH |</h6>
-            <h5>August 14 - 7:30 PM</h5>
-            <p><em>St. Martin's Cathedral, Bratislava</em></p>
-            <p>D. Buxtehude, J. S. Bach, M. Reger, P. Kee</p>
-          </div>
-          
-          <div class="resume-item">
-            <h4>ORGAN FIREWORKS AT THE WOEHL</h4>
-            <h6>WINFRIED LICHTSCHEIDEL | DE |</h6>
-            <h5>August 21 - 7:30 PM</h5>
-            <p><em>St. Martin's Cathedral, Bratislava</em></p>
-            <p>A. Vivaldi, J. S. Bach, R. Schumann, R. Wagner, M. Duruflé</p>
-          </div>
-          
-          </div>
-          
-          <div class="col-lg-6">
-          
-            <div class="resume-item">
-              <h4>FROM BACH TO THE BELLE ÉPOQUE</h4>
-              <h6>JEAN-CHRISTOPH GEISER | CH |</h6>
-              <h5>August 28 - 7:30 PM</h5>
-              <p><em>St. Martin's Cathedral, Bratislava</em></p>
-              <p>J. S. Bach, G. F. Händel, G. B. Pergolesi, W. A. Mozart, M. Skoryk, S. Šurin, J. Ropek</p>
-            </div>
-          
-            <div class="resume-item">
-              <h4>ROMANTIC VOICES AND PIPES</h4>
-              <h6>NORBERT BRANDAUER | conductor A |; COR-OS-ANIMA Choir; 
-                <br>MIXED CHOIR TIRNAVIA; MICHAL STAHL | choirmaster SK |; 
-                <br>LUCIA BYRÁKOVÁ | soprano SK |; KLAUS KUCHLING | organ A |</h6>
-              <h5>September 4 - 7:30 PM</h5>
-              <p><em>St. Martin's Cathedral, Bratislava</em></p>
-              <p>W. A. Mozart, A. P. F. Boëly, F. Mendelssohn-Bartholdy, Ch. Gounod, A. Bruckner, J. Brahms, J. G. Rheinberger, E. Grieg, S. Rachmaninoff</p>
-            </div>
-          
-            <div class="resume-item">
-              <h4>THE SOUND OF MAJESTY</h4>
-              <h6>SOLAMENTE NATURALI; MILOŠ VALENT | artistic leader SK |; 
-                <br>HILDA GULYÁS | soprano SK |; STANISLAV ŠURIN | organ SK |</h6>
-              <h5>September 11 - 7:30 PM</h5>
-              <p><em>St. Martin's Cathedral, Bratislava</em></p>
-              <p>G. F. Händel</p>
-            </div>
-          
-            <hr>
-          
-            <div class="resume-item">
-              <h4>CONCERT IN THE ARCHDIOCESE</h4>
-              <h6>ALEŠ NOSEK | organ CZ |</h6>
-              <h5>August 31 - 3:00 PM</h5>
-              <p><em>Church of St. Margaret, Bratislava - Lamač</em></p>
-              <p>J. L. Krebs, J. H. Rinck, A. Guilmant, T. Dubois, J. Klička, V. Novák, L. Vierne, J. Bonnet</p>
-            </div>
-          
+          <article class="programme-card">
+            <h4>Organ Concert</h4>
+            <h6>ANDREAS JETTER | CH |</h6>
+            <p class="programme-meta"><time>August 6</time> 7:30 PM</p>
+            <p class="programme-venue"><em>St. Martin's Cathedral, Bratislava</em></p>
+          </article>
+
+          <article class="programme-card">
+            <h4>Organ Concert</h4>
+            <h6>CARLOS PATERSON | ES |</h6>
+            <p class="programme-meta"><time>August 13</time> 7:30 PM</p>
+            <p class="programme-venue"><em>St. Martin's Cathedral, Bratislava</em></p>
+          </article>
+
+          <article class="programme-card">
+            <h4>Organ Concert</h4>
+            <h6>JOHANNES SKUDLIK | DE |</h6>
+            <p class="programme-meta"><time>August 20</time> 7:30 PM</p>
+            <p class="programme-venue"><em>St. Martin's Cathedral, Bratislava</em></p>
+          </article>
+
+        </div>
+
+        <div class="col-lg-6 col-programme">
+          <article class="programme-card">
+            <h4>Organ Concert</h4>
+            <h6>KONSTANTIN REYMAIER | AT |</h6>
+            <p class="programme-meta"><time>August 27</time> 7:30 PM</p>
+            <p class="programme-venue"><em>St. Martin's Cathedral, Bratislava</em></p>
+          </article>
+
+          <article class="programme-card">
+            <h4>La Serenissima</h4>
+            <h6>DANIELE FERRETTI | organ IT |; ARMONIOSA, early music ensemble | IT |</h6>
+            <p class="programme-meta"><time>September 3</time> 7:30 PM</p>
+            <p class="programme-venue"><em>St. Martin's Cathedral, Bratislava</em></p>
+          </article>
+
+          <article class="programme-card">
+            <h4>LA MUSICA SACRA ITALIANA NELLE OPERE DEI COMPOSITORI D´OPERA ITALIANI</h4>
+            <h6>SAMUELE GALEANO | conductor IT |; ROBERTO BONETTO | organ IT |; 
+              <br>LUCIA BYRÁKOVÁ | soprano SK |; TRNAVA CHAMBER ORCHESTRA | SK |; 
+              <br>ALŽBETA ŠEVEČKOVÁ | leader SK |; MIXED CHOIR TIRNAVIA | SK |; MICHAL STAHL | choirmaster SK |</h6>
+            <p class="programme-meta"><time>September 10</time> 7:30 PM</p>
+            <p class="programme-venue"><em>St. Martin's Cathedral, Bratislava</em></p>
+          </article>
 
         </div>
       </div>
 
-      <hr>
+      <!-- <hr class="programme-divider"> -->
 
-      <div class="d-flex justify-content-center align-items-center">
-
-        <div class="col-lg-2 bull-ster" data-aos="fade-up" data-aos-duration="500">
-          <div class="resume-item">
-            <h4 class="d-flex justify-content-center align-items-center">Poster 2025</h4>
-            <a href="../assets/pdf/KOF-2025_EN.pdf" class="glightbox" data-height="95vh" data-width="90vw" data-gallery="Poster"><img src="../assets/img/archiv/KOF-2024_EN.webp" class="img-fluid" alt=""></a>
-          </div>
+      <!-- <div class="programme-downloads">
+        <div class="programme-download-card" data-aos="fade-up" data-aos-duration="500">
+          <h4>Poster 2026</h4>
+          <a href="../assets/pdf/KOF-2026_EN.pdf" class="glightbox" data-height="95vh" data-width="90vw" data-gallery="Poster"><img src="../assets/img/archiv/KOF-2024_EN.webp" class="img-fluid" alt="KOF 2026 Poster"></a>
         </div>
-
-        <div class="col-lg-2 bull-ster" data-aos="fade-up" data-aos-duration="500">
-          <div class="resume-item">
-            <h4 class="d-flex justify-content-center align-items-center">Bulletin 2025</h4>
-            <a href="../assets/pdf/KOF-2025.pdf" class="glightbox" data-height="95vh" data-width="90vw" data-gallery="Poster"><img src="../assets/img/archiv/KOF-2025-1.webp" class="img-fluid" alt=""></a>
-          </div>
+        <div class="programme-download-card" data-aos="fade-up" data-aos-duration="500">
+          <h4>Bulletin 2026</h4>
+          <a href="../assets/pdf/KOF-2026.pdf" class="glightbox" data-height="95vh" data-width="90vw" data-gallery="Poster"><img src="../assets/img/archiv/KOF-2025-1.webp" class="img-fluid" alt="KOF 2026 Bulletin"></a>
         </div>
-
-      </div>
+      </div> -->
 
 
     </div>
@@ -248,121 +214,106 @@
   <!-- ======= Hotel  ======= -->
   <section id="hotel" class="hotel">
     <div class="container" data-aos="fade-up" data-aos-duration="500">
-
       <div class="section-title">
         <h2>Hotel Devín</h2>
-        <h4>Our concert artists are staying at Hotel Devín</h4>
-        <p>Come and enhance your musical experience with the gastronomic one. Your ticket to the Cathedral Organ Festival is also a coupon for a 10 percent discount on consumption at Café Devín on the day of entry.</p>
-
+        <p class="hotel-subtitle">Our concert artists are staying at Hotel Devín</p>
       </div>
-
-      <div class="row d-flex justify-content-center align-items-center" data-aos='fade-up' data-aos-delay='100'>
-
-        <div class="col-lg-4 hotel-img">
-          <a href="../assets/pdf/devin.pdf" class="glightbox" data-height="95vh" data-width="90vw" data-gallery="devin"><img src="../assets/img/klik.jpg" class="img-fluid" alt=""></a>
+      <div class="hotel-content">
+        <p class="hotel-intro text-center">Come and enhance your musical experience with a gastronomic one.</p>
+        <div class="hotel-offer">
+          <p>Your ticket to the Cathedral Organ Festival is also a coupon for a <strong>10% discount</strong> on consumption at Café Devín on the day of entry.</p>
         </div>
-
+        <div class="hotel-card" data-aos="fade-up" data-aos-delay="100">
+          <a href="../assets/pdf/devin.pdf" class="glightbox" data-height="95vh" data-width="90vw" data-gallery="devin">
+            <img src="../assets/img/klik.jpg" class="img-fluid" alt="Hotel Devín offer">
+            <span class="hotel-card-label">View offer</span>
+          </a>
+        </div>
       </div>
-
     </div>
   </section> <!-- Koniec Hotel -->
 
   <!-- ======= Organ  ======= -->
   <section id="organ" class="organ">
-    <div class="container" data-aos="fade-up">
-
+    <div class="container" data-aos="fade-up" data-aos-duration="500">
       <div class="section-title">
         <h2>Organ</h2>
-        <p>„Gerald Woehl's organ for the Bratislava Cathedral is so far the last landmark of Slovak organ culture.Gerald Woehl's organ for the Bratislava Cathedral is so far the last landmark of Slovak organ culture. It is not only because it is the largest organ built in Slovakia after 1989. It is also the first non-factory organ of its size in our history and the first organ comparable to the most important European cathedral organs.”</p>
-        <p class="p-citat"><b>Stanislav Šurin</b>- initiator and manager of the construction of the cathedral organ, director of the festival</p>
-        <br>
-        <p>„The new organ connects the nave of the church with a window in the nave through an opening in the middle, through which light penetrates, as if from eternity. This creates a harmonious unity of space and musical instrument. Organ of St Elizabeth musically continues the organ tradition in St Martin’s Cathedral. Starting from the classic Vierengel organ of the high baroque, continuing with a romantic instrument from the end of the 19th century to today's organ, on which it is possible to perform not only the music of the 20th century, but also the music of the 3rd millennium, i.e. the music of the present and the future. This instrument personifies "the European organ".”</p>
-        <p class="p-citat"><b>Gerald Woehl</b> - builder of the cathedral organ</p>
-        <br>
-        <p>„We can only enjoy the construction of the new organ. And since that instrument stands in such a prestigious place as the Bratislava Cathedral, it is important to realize the magnitude of this initiative. The organ will serve to accompany religious events of the parish, diocese, country, as well as cultural events. Its presence is decisive for the future. It is a pleasure to watch this project come to fruition. I am convinced that this organ will become one of the main points of musical events in Slovakia.”</p>
-        <p class="p-citat"><b>Olivier Latry</b> – titular organist of Notre-Dame Cathedral in Paris</p>
-        <div class="row">
-          <div class="col-lg-6">
-            <hr>
+      </div>
+      <div class="organ-content">
+        <blockquote class="organ-quote">
+          <p>„Gerald Woehl's organ for the Bratislava Cathedral is so far the last landmark of Slovak organ culture.Gerald Woehl's organ for the Bratislava Cathedral is so far the last landmark of Slovak organ culture. It is not only because it is the largest organ built in Slovakia after 1989. It is also the first non-factory organ of its size in our history and the first organ comparable to the most important European cathedral organs.”</p>
+          <cite>Stanislav Šurin</cite>
+          <span class="organ-quote-role">initiator and manager of the construction of the cathedral organ, director of the festival</span>
+        </blockquote>
+        <blockquote class="organ-quote">
+          <p>„The new organ connects the nave of the church with a window in the nave through an opening in the middle, through which light penetrates, as if from eternity. This creates a harmonious unity of space and musical instrument. Organ of St Elizabeth musically continues the organ tradition in St Martin’s Cathedral. Starting from the classic Vierengel organ of the high baroque, continuing with a romantic instrument from the end of the 19th century to today's organ, on which it is possible to perform not only the music of the 20th century, but also the music of the 3rd millennium, i.e. the music of the present and the future. This instrument personifies "the European organ".”</p>
+          <cite>Gerald Woehl</cite>
+          <span class="organ-quote-role">builder of the cathedral organ</span>
+        </blockquote>
+        <blockquote class="organ-quote">
+          <p>„We can only enjoy the construction of the new organ. And since that instrument stands in such a prestigious place as the Bratislava Cathedral, it is important to realize the magnitude of this initiative. The organ will serve to accompany religious events of the parish, diocese, country, as well as cultural events. Its presence is decisive for the future. It is a pleasure to watch this project come to fruition. I am convinced that this organ will become one of the main points of musical events in Slovakia.”</p>
+          <cite>Olivier Latry</cite>
+          <span class="organ-quote-role">titular organist of Notre-Dame Cathedral in Paris</span>
+        </blockquote>
+
+        <div class="organ-intro row">
+          <div class="col-lg-6 organ-intro-col">
             <p>Organ in St Martin’s cathedral was built in 2010 by Gerald Woehl's company from Marburg. It thus replaced the original Vincent Možný organ from 1880, which had 2 manuals with 34 stops, mechanical action and slider windchests. The new organ has 4 manuals, 74 stops, mechanical playing and electric register action. It uses a symphonic air system (different wind pressures for the bass and treble parts of the manuals), which can be switched to a classic air system (when the concussion bellows are turned off).</p>
           </div>
-          <div class="col-lg-6">
-            <hr>
+          <div class="col-lg-6 organ-intro-col">
             <p>The location of the new instrument is under the arch of the lintel overlooking the west mosaic window. Prospect pipe fields are partly decorated with roses. There is a reason for this decoration - the roses remind of the miracle of St Elizabeth, who lived in Bratislava approximately 800 years ago. In 1228, she went to Thuringia, where she cared for the sick and abandoned in Marburg, Germany. It is an exceptional coincidence that the new organ comes from Marburg. For this reason, it also bears the name of this saint - The Organ of St. Elizabeth.</p>
           </div>
         </div>
-      </div>
-      <div class="row d-flex justify-content-center data-aos='fade-up' data-aos-delay='100'">
 
-        <div class="col-lg-6 organ-img">
-            <a href="../assets/img/organ.jpg" class="glightbox" data-gallery="organ"><img src="../assets/img/organ.jpg" class="img-fluid" alt=""></a>
+        <div class="organ-visual" data-aos="fade-up" data-aos-delay="100">
+          <a href="../assets/img/organ.jpg" class="glightbox organ-card" data-gallery="organ">
+            <img src="../assets/img/organ.jpg" class="img-fluid" alt="Organ of St Elizabeth in St Martin's Cathedral">
+          </a>
         </div>
 
-        <hr>
-
-        <div class="tech-title">
-          <h3>BASIC TECHNICAL DATA OF THE ORGAN</h3>
-          <div class="row">
-            <div class="col-lg-5">
-              <p>- 4 manuals with a range of C – a3 (58 keys);
-                <br>- pedal with a range of C – f1 (30 keys);
-                <br>- slider windchests;
-                <br>- mechanical playing action (suspended);
-                <br>- mechanical couplers for the I., II. and III. manual and pedal;
-                <br>- electric couplers for the IV. manual;
-                <br>- III. manual in swell box;
-                <br>- Setzer combinations 9 x 999;
-                <br>- symphonic air system (air pressures are indicated in mm of water column);
-              </p>
+        <div class="organ-tech">
+          <h3 class="organ-tech-title">Basic technical data of the organ</h3>
+          <div class="organ-tech-grid">
+            <div class="organ-tech-card">
+              <div class="organ-tech-list organ-tech-list--left">
+                <ul>
+                  <li>4 manuals (C – a3, 58 keys), pedal (C – f1, 30 keys)</li>
+                  <li>slider windchests, mechanical playing action (suspended)</li>
+                  <li>mechanical couplers for I.–III. manual and pedal, electric for IV. manual</li>
+                  <li>III. manual in swell box</li>
+                  <li>Setzer combinations 9 × 999, symphonic air system</li>
+                </ul>
+              </div>
             </div>
-            <div class="text-align col-lg-2">
-              <br>
-              <table class="d-flex justify-content-center align-content-center">
-                <tr>
-                    <th></th>
-                    <th>bass</th>
-                    <th>trebless</th>
-                </tr>
-                <tr>
-                    <td>I. HW:</td>
-                    <td>77</td>
-                    <td>85</td>
-                </tr>
-                <tr>
-                    <td>II. OW:</td>
-                    <td>77</td>
-                    <td>85</td>
-                </tr>
-                <tr>
-                    <td>III. SW:</td>
-                    <td>95</td>
-                    <td>105</td>
-                </tr>
-                <tr>
-                    <td>Pedal:</td>
-                    <td>85</td>
-                    <td>-</td>
-                </tr>
-              </table>
-              <br>
+            <div class="organ-tech-card organ-tech-card--table">
+              <div class="organ-tech-table-wrap">
+                <table class="organ-tech-table">
+                  <thead>
+                    <tr><th scope="col"></th><th scope="col">bass</th><th scope="col">treble</th></tr>
+                  </thead>
+                  <tbody>
+                    <tr><td>I. HW</td><td>77</td><td>85</td></tr>
+                    <tr><td>II. OW</td><td>77</td><td>85</td></tr>
+                    <tr><td>III. SW</td><td>95</td><td>105</td></tr>
+                    <tr><td>Pedal</td><td>85</td><td>–</td></tr>
+                  </tbody>
+                </table>
+              </div>
             </div>
-            <div class="col-lg-5">
-              <p>- concussion bellows with an option of switching off;
-                <br>- organ pump with a power of 43 cubic meters/min.
-                <br>- the smallest pipe: 5mm (without foot);
-                <br>- the largest pipe: 8,23m
-                <br>- materials used: wood (spruce, pine, ash, oak, maple), metal (organ metal - tin and lead alloy, copper, zinc, silver, brass);
-                <br>- material of keyboards: whole tones (natural bone), half-tones (ebony wood);
-                <br>- number of pipes: 4 316 (4053 – metal, 263 – wood, 712 – reed pipes);
-                <br>- organ weight: 9 tones
-              </p>
+            <div class="organ-tech-card">
+              <div class="organ-tech-list organ-tech-list--right">
+                <ul>
+                  <li>concussion bellows with option to switch off, pump 43 m³/min</li>
+                  <li>smallest pipe 5 mm, largest 8.23 m</li>
+                  <li>materials: wood (spruce, pine, ash, oak, maple), metal (organ metal, copper, zinc, silver, brass)</li>
+                  <li>keyboards: natural bone (whole tones), ebony (half-tones)</li>
+                  <li>4,316 pipes (4,053 metal, 263 wood, 712 reed), weight 9 tonnes</li>
+                </ul>
+              </div>
             </div>
-
           </div>
-          <br>
-          <br>
-          <div>
-            <a href="../assets/pdf/Dispozicia.pdf" class="glightbox" data-gallery="Archive" data-height="95vh" data-width="90vw"><button>Disposition</button></a>
+          <div class="organ-tech-cta">
+            <a href="../assets/pdf/Dispozicia.pdf" class="organ-btn glightbox" data-gallery="Archive" data-height="95vh" data-width="90vw">Disposition</a>
           </div>
         </div>
       </div>
@@ -379,6 +330,7 @@
       </div>
 
       <div class="row galeria-archive-cards justify-content-center g-4">
+        
         <div class="col-lg-5 col-md-6">
           <a href="/en/gallery" class="galeria-archive-card galeria-archive-card--gallery">
             <span class="galeria-archive-card__icon-wrap"><i class="bx bx-photo-album"></i></span>
@@ -389,6 +341,7 @@
             </div>
           </a>
         </div>
+
         <div class="col-lg-5 col-md-6">
           <a href="/en/archive" class="galeria-archive-card galeria-archive-card--archive">
             <span class="galeria-archive-card__icon-wrap"><i class="bx bx-box"></i></span>
@@ -404,58 +357,42 @@
     </div>
   </section><!-- Koniec Gallery & Archive -->
 
-  <!-- ======= Kontakt ======= -->
+  <!-- ======= Contact ======= -->
   <section id="contact" class="contact">
-    <div class="container" data-aos="fade-up">
-
+    <div class="container" data-aos="fade-up" data-aos-duration="500">
       <div class="section-title">
         <h2>Contact</h2>
       </div>
-
-      <div class="row d-flex align-content-center justify-content-center">
-
-        <div class="col-lg-4">
-
-          <div class="info">
-
-            <div class="address">
-              <a><i class="bx bx-map"></i></a>
-              <h4>Address:</h4>
-              <p>Rudnayovo námestie No. 1, 811 01 Bratislava</p>
+      <div class="contact-wrap">
+        <div class="contact-info">
+          <div class="contact-card">
+            <span class="contact-card__icon"><i class="bx bx-map"></i></span>
+            <div class="contact-card__body">
+              <h4>Address</h4>
+              <p>Rudnayovo námestie 1, 811 01 Bratislava</p>
             </div>
-
           </div>
-
-          <div class="info">
-
-              <div class="email">
-                <a><i class="bx bx-envelope"></i></a>
-                <h4>Email:</h4>
-                <p>kof.bratislava@gmail.com</p>
-              </div>
-
-          </div>
-
-          <div class="info">
-
-            <div class="email">
-              <a><i class="bx bx-envelope"></i></a>
-              <h4>Email No. 2:</h4>
-              <p>organfestivals@gmail.com</p>
+          <div class="contact-card">
+            <span class="contact-card__icon"><i class="bx bx-envelope"></i></span>
+            <div class="contact-card__body">
+              <h4>Email</h4>
+              <p><a href="kof.bratislava@gmail.com" class="contact-email-copy" data-email="kof.bratislava@gmail.com">kof.bratislava@gmail.com</a></p>
             </div>
-
           </div>
-
+          <div class="contact-card">
+            <span class="contact-card__icon"><i class="bx bx-envelope"></i></span>
+            <div class="contact-card__body">
+              <h4>Email No. 2</h4>
+              <p><a href="organfestivals@gmail.com" class="contact-email-copy" data-email="organfestivals@gmail.com">organfestivals@gmail.com</a></p>
+            </div>
+          </div>
         </div>
-
-        <div class="mapa col-lg-8" data-aos="fade-up">
-          <div class="row d-flex col-lg-12 justify-content-center data-aos='fade-up' data-aos-delay='100'">
-            <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d21298.16400759727!2d17.106538373015898!3d48.143590042461014!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xc7df5e7779db1add!2sSt.%20Martin&#39;s%20Cathedral!5e0!3m2!1sen!2ssk!4v1644434086188!5m2!1sen!2ssk" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
-          </div>
+        <div class="contact-map" data-aos="fade-up" data-aos-delay="100">
+          <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d21298.16400759727!2d17.106538373015898!3d48.143590042461014!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xc7df5e7779db1add!2sSt.%20Martin&#39;s%20Cathedral!5e0!3m2!1sen!2ssk!4v1644434086188!5m2!1sen!2ssk" allowfullscreen="" loading="lazy" title="St. Martin's Cathedral on map"></iframe>
         </div>
       </div>
     </div>
-  </section><!-- Koniec Kontaktu -->
+  </section><!-- End Contact -->
 
   <!-- ======= Tickets ======= -->
   <section id="ticket" class="ticket section-bg">
@@ -467,10 +404,11 @@
       </div>
 
       <div class="row ticket-cards g-4 justify-content-center">
+        
         <div class="col-lg-4 col-md-6">
           <div class="ticket-card" data-aos="fade-up" data-aos-duration="500">
             <h3 class="ticket-card__title">Standard concerts</h3>
-            <p class="ticket-card__dates">24.7., 31.7., 7.8., 14.8., 21.8., 28.8.</p>
+            <p class="ticket-card__dates">30.7., 6.8., 13.8., 20.8., 27.8.</p>
             <ul class="ticket-card__pricing">
               <li>Adults <strong>15 €</strong></li>
               <li>Seniors 65+, teachers (ITIC), students (ISIC) <strong>10 €</strong></li>
@@ -478,10 +416,11 @@
             </ul>
           </div>
         </div>
+
         <div class="col-lg-4 col-md-6">
           <div class="ticket-card ticket-card--highlight" data-aos="fade-up" data-aos-duration="500" data-aos-delay="100">
             <h3 class="ticket-card__title">Gala concerts</h3>
-            <p class="ticket-card__dates">4.9., 11.9.</p>
+            <p class="ticket-card__dates">3.9., 10.9.</p>
             <ul class="ticket-card__pricing">
               <li>Adults <strong>20 €</strong></li>
               <li>Seniors 65+, teachers (ITIC), students (ISIC) <strong>12 €</strong></li>
@@ -489,17 +428,19 @@
             </ul>
           </div>
         </div>
-        <div class="col-lg-4 col-md-6">
+
+        <!-- <div class="col-lg-4 col-md-6">
           <div class="ticket-card" data-aos="fade-up" data-aos-duration="500" data-aos-delay="200">
             <h3 class="ticket-card__title">Archdiocese concert</h3>
             <p class="ticket-card__dates">31.8. – 15:00, St. Margaret's Church, Lamač</p>
             <p class="ticket-card__free">Free entrance</p>
           </div>
-        </div>
+        </div> -->
+
       </div>
 
       <div class="ticket-cta">
-        <a href="https://www.ticketportal.sk/event/KATEDRALNY-ORGANOVY-FESTIVAL-BRATISLAVA-2025" target="_blank" rel="noopener" class="ticket-btn">
+        <a href="https://www.ticketportal.sk/event/KATEDRALNY-ORGANOVY-FESTIVAL-BRATISLAVA-2026" target="_blank" rel="noopener" class="ticket-btn">
           <span class="ticket-btn__logo"><img src="../assets/img/org_spo/Ticketportal.png" alt="Ticketportal"></span>
           <span class="ticket-btn__text">Buy tickets online</span>
         </a>
@@ -510,68 +451,43 @@
 
   <!-- ======= Organizátori ======= -->
   <section id="organizator" class="organizator">
-    <div class="container" data-aos="fade-up">
+    <div class="container" data-aos="fade-up" data-aos-duration="500">
 
       <div class="section-title">
-        <h2>ORGANIZERS AND SPONSORS OF THE FESTIVAL</h2>
+        <h2>Organizers and Sponsors of the Festival</h2>
       </div>
 
-      <div class="row justify-content-center">
+      <div class="organizator-grid">
 
-        <div class="column d-flex align-items-center justify-content-center">
-          <img src="../assets/img/org_spo/Tribus.png" class="img-fluid" alt="">
+        <div class="organizator-card">
+          <img src="../assets/img/org_spo/Tribus.png" alt="Tribus">
         </div>
-
-        <div class="column d-flex align-items-center justify-content-center">
-          <img src="../assets/img/org_spo/Bratislavska%20arcidieceza.png" class="img-fluid" alt="">
+        <div class="organizator-card">
+          <img src="../assets/img/org_spo/Bratislavska%20arcidieceza.png" alt="Bratislava Archdiocese">
         </div>
-
-        <div class="column d-flex align-items-center justify-content-center">
-          <img src="../assets/img/org_spo/fond.png" class="img-fluid" alt="">
+        <div class="organizator-card">
+          <img src="../assets/img/org_spo/fond.png" alt="Fund for the Support of the Arts">
         </div>
-
-        <div class="column d-flex align-items-center justify-content-center">
-          <img src="../assets/img/org_spo/AXXENCE.png" class="img-fluid" alt="">
+        <div class="organizator-card">
+          <img src="../assets/img/org_spo/AXXENCE.png" alt="Axxence">
         </div>
-
-        <div class="column d-flex align-items-center justify-content-center">
-          <img src="../assets/img/org_spo/Orgues%20atelier.png" class="img-fluid" alt="">
+        <div class="organizator-card">
+          <img src="../assets/img/org_spo/Orgues%20atelier.png" alt="Orgues atelier">
         </div>
-
-        <!-- <div class="column d-flex align-items-center justify-content-center">
-          <img src="../assets/img/org_spo/BKIS.png" class="img-fluid" alt="">
-        </div> -->
-
-        <div class="column d-flex align-items-center justify-content-center">
-          <img src="../assets/img/org_spo/Hotel%20Devin.png" class="img-fluid" alt="">
+        <div class="organizator-card">
+          <img src="../assets/img/org_spo/Hotel%20Devin.png" alt="Hotel Devín">
         </div>
-
-        <!-- <div class="column d-flex align-items-center justify-content-center">
-          <img src="../assets/img/org_spo/Embajada%20de%20Espana.png" class="img-fluid" alt="">
-        </div> -->
-
-        <div class="column d-flex align-items-center justify-content-center">
-          <img src="../assets/img/org_spo/Lamac.png" class="img-fluid" alt="">
+        <div class="organizator-card">
+          <img src="../assets/img/org_spo/Lamac.png" alt="Lamac">
         </div>
-
-        <div class="column d-flex align-items-center justify-content-center">
-          <img src="../assets/img/org_spo/Polsky%20institut%20BA.png" class="img-fluid" alt="">
+        <div class="organizator-card">
+          <img src="../assets/img/org_spo/Polsky%20institut%20BA.png" alt="Polish Institute in Bratislava">
         </div>
-
-        <!-- <div class="column d-flex align-items-center justify-content-center">
-          <img src="../assets/img/org_spo/Amici%20Dell%20Organo.png" class="img-fluid" alt="">
-        </div> -->
-
-        <!-- <div class="column d-flex align-items-center justify-content-center">
-          <img src="../assets/img/org_spo/TM.png" class="img-fluid" alt="">
-        </div> -->
-
-        <div class="column d-flex align-items-center justify-content-center">
-          <img src="../assets/img/org_spo/INVINI.jpg" class="img-fluid" alt="">
+        <div class="organizator-card">
+          <img src="../assets/img/org_spo/INVINI.jpg" alt="Invini">
         </div>
-
-        <div class="column d-flex align-items-center justify-content-center">
-          <img src="../assets/img/org_spo/teraz.webp" class="img-fluid" alt="">
+        <div class="organizator-card">
+          <img src="../assets/img/org_spo/teraz.webp" alt="Teraz">
         </div>
 
       </div>
@@ -598,12 +514,13 @@
       <a href="https://www.instagram.com/kof.bratislava/" target="_blank" class="instagram"><i class="bx bxl-instagram"></i></a>
     </div>
 
-    <div class="copyright">
-      &copy; <script>document.write(new Date().getFullYear());</script> <strong><span>Cathedral Organ Festival Bratislava.</span></strong> All rights reserved.
-    </div>
-
-    <div class="credits">
-      Website was designed and developed by <a href="https://www.linkedin.com/in/matúš-masár-b1b6981a3/" target="_blank">Matúš Masár</a>
+    <div class="footer-bottom">
+      <div class="copyright">
+        &copy; <script>document.write(new Date().getFullYear());</script> <strong><span>Cathedral Organ Festival Bratislava.</span></strong> All rights reserved.
+      </div>
+      <div class="credits">
+        Website designed and developed by <a href="https://www.linkedin.com/in/masarmatthew/" target="_blank" rel="noopener">Matúš Masár</a>
+      </div>
     </div>
 
   </div>
