@@ -156,6 +156,21 @@
 
       let galeriaFilters = select('#galeria-flters li', true);
 
+      // Počet fotiek pri každom filtri
+      galeriaFilters.forEach(function(li) {
+        let filter = li.getAttribute('data-filter');
+        let count;
+        if (filter === '*') {
+          count = galeriaContainer.querySelectorAll('.galeria-item').length;
+        } else {
+          count = galeriaContainer.querySelectorAll('.galeria-item' + filter).length;
+        }
+        let span = document.createElement('span');
+        span.className = 'galeria-filter-count';
+        span.textContent = ' (' + count + ')';
+        li.appendChild(span);
+      });
+
       on('click', '#galeria-flters li', function(e) {
         e.preventDefault();
         galeriaFilters.forEach(function(el) {

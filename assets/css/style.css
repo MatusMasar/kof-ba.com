@@ -33,6 +33,12 @@ body {
   color: #565759;
   background-color: #fff;
   overflow: overlay;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+#main {
+  flex: 1 0 auto;
 }
 a {
   color: #565759;
@@ -225,11 +231,11 @@ hr {
 }
 .nav-menu .li-lang {
   position: fixed;
-  bottom: 7px; !important;
+  bottom: 7px !important;
 }
 @media (max-width: 992px) {
   .nav-menu .li-lang {
-    position: relative; !important;
+    position: relative !important;
     bottom: 0;
   }
 }
@@ -272,50 +278,112 @@ hr {
 #hero {
   width: 100%;
   height: 100vh;
-  background-color: #ffffff;
+  background: linear-gradient(180deg, #fff 0%, rgba(250, 248, 245, 0.98) 100%);
   position: relative;
+  overflow: hidden;
+}
+#hero::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 40%;
+  background: linear-gradient(0deg, rgba(187, 167, 117, 0.04) 0%, transparent 100%);
+  pointer-events: none;
 }
 @media (min-width: 991px) {
   #hero {
     padding-left: 160px;
   }
 }
-#hero:before {
-  content: "";
-  position: absolute;
-  bottom: 0;
-  top: 0;
-  left: 0;
-  right: 0;
+#hero .container {
+  position: relative;
+  z-index: 1;
+}
+.hero-tagline {
+  margin: 0;
+  font-size: 0.95rem;
+  font-weight: 500;
+  color: #8a8b8d;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
 }
 #hero h1 {
-  margin: 0;
+  margin: 0.5rem 0 0;
   font-size: 64px;
   font-weight: 700;
-  line-height: 56px;
+  line-height: 1.1;
   color: #bba775;
+  letter-spacing: -0.02em;
+}
+.hero-line {
+  width: 60px;
+  height: 3px;
+  background: #bba775;
+  margin: 1.25rem 0 0;
+  border-radius: 2px;
+}
+.hero-typed {
+  margin: 1.5rem 0 0;
+  font-size: 26px;
+  line-height: 1.5;
+}
+#hero .hero-typed span {
+  color: #565759;
+  letter-spacing: 0.3px;
 }
 #hero p {
   margin: 15px 0 0 0;
   font-size: 26px;
 }
-
 #hero p span {
   color: #565759;
   letter-spacing: 1px;
+}
+.hero-scroll {
+  position: absolute;
+  bottom: 2rem;
+  left: 50%;
+  transform: translateX(-50%);
+  color: #bba775;
+  font-size: 2rem;
+  opacity: 0.7;
+  transition: opacity 0.25s ease, transform 0.25s ease;
+  z-index: 1;
+}
+.hero-scroll:hover {
+  opacity: 1;
+  color: #bba775;
+  transform: translateX(-50%) translateY(4px);
+}
+@keyframes hero-scroll-bounce {
+  0%, 100% { transform: translateX(-50%) translateY(0); }
+  50% { transform: translateX(-50%) translateY(6px); }
+}
+.hero-scroll i {
+  animation: hero-scroll-bounce 2s ease-in-out infinite;
 }
 @media (max-width: 992px) {
   #hero {
     text-align: center;
   }
+  .hero-line {
+    margin-left: auto;
+    margin-right: auto;
+  }
   #hero h1 {
     font-size: 32px;
-    line-height: 36px;
+    line-height: 1.15;
   }
+  .hero-typed,
   #hero p {
-    margin-top: 10px;
-    font-size: 20px;
-    line-height: 24px;
+    margin-top: 1rem;
+    font-size: 18px;
+    line-height: 1.5;
+  }
+  .hero-tagline {
+    font-size: 0.8rem;
   }
 }
 .req {
@@ -326,7 +394,7 @@ hr {
   right: 15px;
 }
 @media (max-width: 992px) {
-  .req{
+  .req {
     padding-left: 30px;
     font-size: 11px;
   }
@@ -442,8 +510,8 @@ video .videjko {
   margin-bottom: 10px;
 }
 .resume p {
-  margin: 0; !important;
-  padding: 0; !important;
+  margin: 0 !important;
+  padding: 0 !important;
 }
 .resume .resume-item::before {
   content: "";
@@ -532,37 +600,163 @@ video .videjko {
 .galeria-archive {
   background-color: #fafafa;
 }
-.galeria .galeria-item {
-  margin-bottom: 30px;
+/* Karty Galéria & Archív – minimalistický dizajn */
+.galeria-archive-intro {
+  max-width: 520px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 2.25rem;
+  color: #6b6c6e;
+  font-size: 0.9375rem;
 }
-.galeria img {
-  transition: 0.3s;
-  border-radius: 10px;
+.galeria-archive-cards {
+  margin-top: 0.25rem;
 }
-.galeria img:hover {
-    transform:  scale(1.09);
+.galeria-archive-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  background: #fff;
+  border-radius: 20px;
+  padding: 2.25rem 1.75rem 2rem;
+  border: 1px solid rgba(0, 0, 0, 0.06);
+  box-shadow: none;
+  transition: border-color 0.25s ease, box-shadow 0.25s ease, transform 0.25s ease;
+  text-decoration: none;
+  color: inherit;
+  height: 100%;
 }
-.galeria #galeria-flters {
-  margin: 0 auto 25px auto;
+.galeria-archive-card:hover {
+  border-color: rgba(187, 167, 117, 0.35);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.06);
+  transform: translateY(-2px);
+}
+.galeria-archive-card__icon-wrap {
+  width: 56px;
+  height: 56px;
+  margin-bottom: 1.25rem;
+  color: #bba775;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.65rem;
+  border: 1.5px solid rgba(187, 167, 117, 0.4);
+  background: transparent;
+  transition: border-color 0.25s ease, color 0.25s ease, background 0.25s ease;
+}
+.galeria-archive-card:hover .galeria-archive-card__icon-wrap {
+  border-color: #bba775;
+  color: #bba775;
+  background: rgba(187, 167, 117, 0.08);
+}
+.galeria-archive-card__body {
+  padding: 0;
+}
+.galeria-archive-card__body h3 {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #272829;
+  margin-bottom: 0.5rem;
+  letter-spacing: -0.01em;
+}
+.galeria-archive-card__body p {
+  font-size: 0.875rem;
+  color: #6b6c6e;
+  line-height: 1.55;
+  margin-bottom: 1.25rem;
+}
+.galeria-archive-card__btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: #bba775;
+  letter-spacing: 0.02em;
+  transition: color 0.2s ease, gap 0.2s ease;
+}
+.galeria-archive-card:hover .galeria-archive-card__btn {
+  color: #8f7d4a;
+  gap: 0.5rem;
+}
+/* Galéria – úvod a filtre */
+.galeria-intro {
+  max-width: 560px;
+  margin: 0 auto 1.5rem;
+}
+.galeria-filters {
+  margin: 0 auto 2rem auto;
   list-style: none;
   text-align: center;
   background: #fff;
   border-radius: 50px;
-  padding: 2px 15px;
+  padding: 6px 10px;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 4px;
 }
-.galeria #galeria-flters li {
+.galeria #galeria-flters li,
+.galeria-filters li {
   cursor: pointer;
   display: inline-block;
-  padding: 10px 15px;
+  padding: 8px 18px;
   font-size: 14px;
   font-weight: 600;
   line-height: 1;
-  color: #272829;
-  margin-bottom: 5px;
-  transition: all 0.3s ease-in-out;
+  color: #565759;
+  border-radius: 50px;
+  transition: all 0.25s ease;
 }
-.galeria #galeria-flters li:hover, .galeria #galeria-flters li.filter-active {
+.galeria #galeria-flters li:hover,
+.galeria-filters li:hover {
   color: #bba775;
+  background: rgba(187, 167, 117, 0.1);
+}
+.galeria #galeria-flters li.filter-active,
+.galeria-filters li.filter-active {
+  color: #fff;
+  background: #bba775;
+}
+.galeria #galeria-flters li:last-child,
+.galeria-filters li:last-child {
+  margin-right: 0;
+}
+.galeria-filter-count {
+  opacity: 0.85;
+  font-weight: 500;
+  font-size: 0.9em;
+}
+/* Galéria – mriežka obrázkov */
+.galeria .galeria-item {
+  margin-bottom: 0;
+}
+.galeria .galeria-item > div {
+  border-radius: 12px;
+  overflow: hidden;
+  background: #fff;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
+  transition: box-shadow 0.3s ease;
+}
+.galeria .galeria-item > div:hover {
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+}
+.galeria .galeria-item a {
+  display: block;
+  aspect-ratio: 1;
+  overflow: hidden;
+}
+.galeria .galeria-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.4s ease;
+}
+.galeria .galeria-item > div:hover img {
+  transform: scale(1.06);
 }
 .galeria #galeria-flters li:last-child {
   margin-right: 0;
@@ -570,21 +764,109 @@ video .videjko {
 /*--------------------------------------------------------------
 # Archív
 --------------------------------------------------------------*/
+/* Archív – úvod a karty */
+.archive-intro {
+  max-width: 560px;
+  margin: 0 auto 1.5rem;
+  padding-bottom: 1rem;
+}
+.archive-grid {
+  margin-left: 0;
+  margin-right: 0;
+}
 .archive .archive-item {
-  margin-bottom: 30px;
+  margin-bottom: 0;
+}
+.archive-card {
+  background: #fff;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
+  transition: box-shadow 0.3s ease, transform 0.3s ease;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+.archive-card:hover {
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+  transform: translateY(-4px);
+}
+.archive-card a:first-child {
+  display: block;
+  aspect-ratio: 3 / 4;
+  overflow: hidden;
+}
+.archive-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.4s ease;
+}
+.archive-card:hover img {
+  transform: scale(1.04);
+}
+.archive-card h5 {
+  text-align: center;
+  padding: 0.75rem 0.5rem 1rem;
+  margin: 0;
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: #272829;
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 .archive img {
-  transition: 0.3s;
-  border-radius: 10px;
+  transition: transform 0.4s ease;
 }
 .archive img:hover {
-  transform:  scale(1.09);
-}
-.archive h5 {
-  text-align: center;
+  transform: scale(1.04);
 }
 .body-archive {
   background-color: #fafafa;
+}
+/*--------------------------------------------------------------
+# Video Archív
+--------------------------------------------------------------*/
+.video-archive-intro {
+  max-width: 560px;
+  margin: 0 auto 1.5rem;
+}
+.video-archive-grid {
+  margin-top: 0.5rem;
+}
+.video-archive-card {
+  background: #fff;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
+  transition: box-shadow 0.3s ease;
+  height: 100%;
+}
+.video-archive-card:hover {
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+}
+.video-archive-card__title {
+  font-size: 1.15rem;
+  font-weight: 600;
+  color: #272829;
+  padding: 1rem 1.25rem 0.5rem;
+  margin: 0;
+}
+.video-archive-card__wrapper {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  background: #000;
+}
+.video-archive-card__wrapper iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
 }
 /*--------------------------------------------------------------
 # Galéria-Archív
@@ -657,7 +939,7 @@ video .videjko {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-top: 0; !important;
+    margin-top: 0 !important;
   }
   .contact .info i  {
     font-size: 20px;
@@ -696,7 +978,7 @@ video .videjko {
     align-items: center;
   }
   .contact .address, .contact .email {
-    margin: 0; !important;
+    margin: 0 !important;
   }
 }
 /*--------------------------------------------------------------
@@ -705,9 +987,110 @@ video .videjko {
 .ticket {
   background-color: #fafafa;
 }
-.ticket a:hover {
-  transform: scale(1.15);
-  transition: all 0.35s ;
+.ticket-intro {
+  max-width: 560px;
+  margin: 0 auto 2rem;
+  color: #6b6c6e;
+  font-size: 0.9375rem;
+  padding-bottom: 1rem;
+}
+.ticket-cards {
+  margin-bottom: 2rem;
+}
+.ticket-card {
+  background: #fff;
+  border-radius: 16px;
+  padding: 1.5rem 1.5rem 1.75rem;
+  border: 1px solid rgba(0, 0, 0, 0.06);
+  height: 100%;
+  transition: box-shadow 0.25s ease, border-color 0.25s ease;
+}
+.ticket-card:hover {
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+  border-color: rgba(187, 167, 117, 0.25);
+}
+.ticket-card--highlight {
+  background: rgba(187, 167, 117, 0.12);
+  border-color: rgba(187, 167, 117, 0.3);
+}
+.ticket-card--highlight:hover {
+  border-color: rgba(187, 167, 117, 0.5);
+  box-shadow: 0 8px 24px rgba(187, 167, 117, 0.15);
+}
+.ticket-card__title {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #bba775;
+  margin-bottom: 0.75rem;
+  padding-bottom: 0.5rem;
+}
+.ticket-card--highlight .ticket-card__title {
+  color: #8f7d4a;
+}
+.ticket-card__dates {
+  font-size: 0.9rem;
+  color: #565759;
+  margin-bottom: 1rem;
+  line-height: 1.45;
+}
+.ticket-card__pricing {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  font-size: 0.9rem;
+  color: #565759;
+  line-height: 1.7;
+}
+.ticket-card__pricing strong {
+  color: #272829;
+}
+.ticket-card__free {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #272829;
+  margin: 0.5rem 0 0;
+}
+.ticket-cta {
+  text-align: center;
+}
+.ticket-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.75rem;
+  background: #bba775;
+  color: #fff;
+  padding: 0.85rem 1.5rem 0.85rem 1rem;
+  border-radius: 12px;
+  font-weight: 600;
+  font-size: 1rem;
+  text-decoration: none;
+  transition: background 0.25s ease, transform 0.25s ease;
+  box-shadow: 0 2px 12px rgba(187, 167, 117, 0.35);
+}
+.ticket-btn:hover {
+  background: #9a8a5e;
+  color: #fff;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 16px rgba(187, 167, 117, 0.4);
+}
+.ticket-btn__logo {
+  display: inline-flex;
+  background: #ffc107;
+  padding: 0.35rem 0.6rem;
+  border-radius: 8px;
+}
+.ticket-btn__logo img {
+  height: 22px;
+  width: auto;
+  display: block;
+}
+.ticket-btn__text {
+  white-space: nowrap;
+}
+@media (max-width: 767px) {
+  .ticket-btn__text {
+    white-space: normal;
+  }
 }
 /*--------------------------------------------------------------
 # Organizatori
