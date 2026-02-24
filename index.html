@@ -58,6 +58,11 @@
 
 <body>
 
+<!-- Copy-toast popup -->
+<div id="copy-toast" class="copy-toast" aria-live="polite">
+  <span class="copy-toast__text">E-mail bol skopírovaný do schránky.</span>
+</div>
+
 <!-- ======= Mobile nav toggle button ======= -->
 <i class="bi bi-list mobile-nav-toggle d-xl-none"></i>
 
@@ -86,7 +91,7 @@
     <p class="hero-tagline">Katedrála sv. Martina, Bratislava</p>
     <h1>Katedrálny organový festival Bratislava</h1>
     <div class="hero-line"></div>
-    <p class="hero-typed"><span class="typed" data-typed-items="Kedy ? <b>24. júl – 11. september 2025</b> <br> Kde ? <b>Katedrála sv. Martina v Bratislave</b>"></span></p>
+    <p class="hero-date">30. júl – 10. september 2026</p>
   </div>
   <a href="#about" class="hero-scroll" aria-label="Posunúť nadol"><i class="bx bx-chevron-down"></i></a>
 </section><!-- Koniec Hero -->
@@ -106,17 +111,15 @@
   <!-- ======= Informácie  ======= -->
   <section id="about" class="about">
     <div class="container" data-aos="fade-up" data-aos-duration="500">
-
       <div class="section-title">
         <h2>Informácie</h2>
-        <p>Katedrálny organový festival Bratislava začal svoju históriu písať v roku 2010, kedy bol v Katedrále sv. Martina postavený nový organ Geralda Woehla. Zakladateľom festivalu, ako aj iniciátorom a manažérom stavby katedrálneho organa je organista Stanislav Šurin. Od počiatku svojho vzniku sa tento festival koná pod záštitou J. Ex. Mons. Stanislava Zvolenského, arcibiskupa metropolitu.</p>
-        <div class="row">
-          <div>
-            <hr>
-          </div>
-          <p>"Naše stretnutia s organovou hudbou sú príležitosťou, aby sme v spoločenstve vnímali našu ľudskú dôstojnosť pred Bohom aj prostredníctvom autorov, interpretov, hudobného nástroja a vnímavých poslucháčov vzácnych umeleckých diel. Ďakujem Vám, že ste prijali pozvanie na náš Katedrálny organový festival a obohatili nás svojou prítomnosťou."</p>
-          <p class="p-citat"><b>Mons. Stanislav Zvolenský</b></p>
-        </div>
+      </div>
+      <div class="about-content">
+        <p class="about-intro">Katedrálny organový festival Bratislava začal svoju históriu písať v roku 2010, kedy bol v Katedrále sv. Martina postavený nový organ Geralda Woehla. Zakladateľom festivalu, ako aj iniciátorom a manažérom stavby katedrálneho organa je organista Stanislav Šurin. Od počiatku svojho vzniku sa tento festival koná pod záštitou J. Ex. Mons. Stanislava Zvolenského, arcibiskupa metropolitu.</p>
+        <blockquote class="about-quote">
+          <p>„Naše stretnutia s organovou hudbou sú príležitosťou, aby sme v spoločenstve vnímali našu ľudskú dôstojnosť pred Bohom aj prostredníctvom autorov, interpretov, hudobného nástroja a vnímavých poslucháčov vzácnych umeleckých diel. Ďakujem Vám, že ste prijali pozvanie na náš Katedrálny organový festival a obohatili nás svojou prítomnosťou.”</p>
+          <cite>Mons. Stanislav Zvolenský</cite>
+        </blockquote>
       </div>
     </div>
   </section><!-- Koniec Informácií -->
@@ -127,117 +130,82 @@
 
       <div class="section-title">
         <h2>Program</h2>
-        <p>Pod záštitou Bratislavského arcibiskupa metropolitu Mons. Stanislava Zvolenského</p>
-        <p><b>Festival z verejných zdrojov podporil Fond na podporu umenia</b></p>
+        <p class="resume-subtitle">Pod záštitou Bratislavského arcibiskupa metropolitu Mons. Stanislava Zvolenského</p>
+        <p class="resume-funding"><b>Festival z verejných zdrojov podporil Fond na podporu umenia</b></p>
       </div>
 
-      <div class="row d-flex">
+      <div class="programme-list row">
 
-        <div class="col-lg-6">
+        <div class="col-lg-6 col-programme">
+          <article class="programme-card">
+            <h4>Koncert akordeónu a organu</h4>
+            <h6>MARIE-ANDRÉE JOERGER | akordeón FR |; VINCENT DUBOIS | organ FR |</h6>
+            <p class="programme-meta"><time>30.07.</time> 19:30</p>
+            <p class="programme-venue"><em>Katedrála svätého Martina, Bratislava</em></p>
+          </article>
 
-          <div class="resume-item">
-            <h4>A DIALOGUE OF STRINGS AND WIND</h4>
-            <h6>MARIA PERUCKA, | husle PL |; ROMAN PERUCKI, | organ PL |</h6>
-            <h5>24.07. - 19:30</h5>
-            <p><em>Katedrála svätého Martina, Bratislava</em></p>
-            <p>MJ. S. Bach, J. Paderewski, M. Surzyński, F. Borowski, J. Langlais, E. Schneider</p>
-          </div>
+          <article class="programme-card">
+            <h4>Organový koncert</h4>
+            <h6>ANDREAS JETTER | CH |</h6>
+            <p class="programme-meta"><time>06.08.</time> 19:30</p>
+            <p class="programme-venue"><em>Katedrála svätého Martina, Bratislava</em></p>
+          </article>
 
-          <div class="resume-item">
-            <h4>CHURCH AND CONCERT ORGAN MUSIC</h4>
-            <h6>ROBERTO PADOIN | IT |</h6>
-            <h5>31.07. - 19:30</h5>
-            <p><em>Katedrála svätého Martina, Bratislava</em></p>
-            <p>A. Tinazzoli, J. S. Bach, W. A. Mozart, G. Morandi, F. Mendelssohn-Bartholdy, C. Franck, A. Guilmant, M. E. Bossi</p>
-          </div>
+          <article class="programme-card">
+            <h4>Organový koncert</h4>
+            <h6>CARLOS PATERSON | ES |</h6>
+            <p class="programme-meta"><time>13.08.</time> 19:30</p>
+            <p class="programme-venue"><em>Katedrála svätého Martina, Bratislava</em></p>
+          </article>
 
-          <div class="resume-item">
-            <h4>POETRY AND VIRTUOSITY</h4>
-            <h6>GAIL ARCHER | USA |</h6>
-            <h5>07.08. - 19:30</h5>
-            <p><em>Katedrála svätého Martina, Bratislava</em></p>
-            <p>J. S. Bach, F. Mendelssohn-Hensel, F. Liszt, R. Schumann, J. Brahms</p>
-          </div>
-
-          <div class="resume-item">
-            <h4>WACHET AUF, RUFT UNS DIE STIMME</h4>
-            <h6>ANDREAS JOST | CH |</h6>
-            <h5>14.08. - 19:30</h5>
-            <p><em>Katedrála svätého Martina, Bratislava</em></p>
-            <p>D. Buxtehude, J. S. Bach, M. Reger, P. Kee</p>
-          </div>
-
-          <div class="resume-item">
-            <h4>ORGAN FIREWORKS AT THE WOEHL</h4>
-            <h6>WINFRIED LICHTSCHEIDEL | DE |</h6>
-            <h5>21.08. - 19:30</h5>
-            <p><em>Katedrála svätého Martina, Bratislava</em></p>
-            <p>A. Vivaldi, J. S. Bach, R. Schumann, R. Wagner, M. Duruflé</p>
-          </div>
+          <article class="programme-card">
+            <h4>Organový koncert</h4>
+            <h6>JOHANNES SKUDLIK | DE |</h6>
+            <p class="programme-meta"><time>20.08.</time> 19:30</p>
+            <p class="programme-venue"><em>Katedrála svätého Martina, Bratislava</em></p>
+          </article>
 
         </div>
 
-        <div class="col-lg-6">
+        <div class="col-lg-6 col-programme">
+          <article class="programme-card">
+            <h4>Organový koncert</h4>
+            <h6>KONSTANTIN REYMAIER | AT |</h6>
+            <p class="programme-meta"><time>27.08.</time> 19:30</p>
+            <p class="programme-venue"><em>Katedrála svätého Martina, Bratislava</em></p>
+          </article>
 
-          <div class="resume-item">
-            <h4>FROM BACH TO THE BELLE ÉPOQUE</h4>
-            <h6>JEAN-CHRISTOPH GEISER | CH |</h6>
-            <h5>28.08. - 19:30</h5>
-            <p><em>Katedrála svätého Martina, Bratislava</em></p>
-            <p>J. S. Bach, G. F. Händel, G. B. Pergolesi, W. A. Mozart, M. Skoryk, S. Šurin, J. Ropek</p>
-          </div>
+          <article class="programme-card">
+            <h4>La Serenissima</h4>
+            <h6>DANIELE FERRETTI | organ IT |; ARMONIOSA, súbor starej hudby | IT |</h6>
+            <p class="programme-meta"><time>03.09.</time> 19:30</p>
+            <p class="programme-venue"><em>Katedrála svätého Martina, Bratislava</em></p>
+          </article>
 
-          <div class="resume-item">
-            <h4>ROMANTIC VOICES AND PIPES</h4>
-            <h6>NORBERT BRANDAUER, dirigent | A |; SPEVÁCKY ZBOR COR-OS-ANIMA; 
-              <br>MIEŠANÝ SPEVÁCKY ZBOR TIRNAVIA; MICHAL STAHL | zbormajster SK |; 
-              <br>LUCIA BYRÁKOVÁ | soprán SK |; KLAUS KUCHLING | organ A |</h6>
-            <h5>04.09. - 19:30</h5>
-            <p><em>Katedrála svätého Martina, Bratislava</em></p>
-            <p>W. A. Mozart, A. P. F. Boëly, F. Mendelssohn-Bartholdy, Ch. Gounod, A. Bruckner, J. Brahms, J. G. Rheinberger, E. Grieg, S. Rachmaninoff</p>
-          </div>
-
-          <div class="resume-item">
-            <h4>THE SOUND OF MAJESTY</h4>
-            <h6>SOLAMENTE NATURALI; MILOŠ VALENT | umelecký vedúci SK |; 
-              <br>HILDA GULYÁS | soprán SK |; STANISLAV ŠURIN | organ SK |</h6>
-            <h5>11.09. - 19:30</h5>
-            <p><em>Katedrála svätého Martina, Bratislava</em></p>
-            <p>G. F. Händel</p>
-          </div>
-
-          <hr>
-
-          <div class="resume-item">
-            <h4>KONCERT V ARCIDIECÉZE</h4>
-            <h6>ALEŠ NOSEK | organ CZ |</h6>
-            <h5>31.08. - 15:00</h5>
-            <p><em>Kostol svätej Margity, Bratislava - Lamač</em></p>
-            <p>J. L. Krebs, J. H. Rinck, A. Guilmant, T. Dubois, J. Klička, V. Novák, L. Vierne, J. Bonnet</p>
-          </div>
+          <article class="programme-card">
+            <h4>LA MUSICA SACRA ITALIANA NELLE OPERE DEI COMPOSITORI D´OPERA ITALIANI</h4>
+            <h6>SAMUELE GALEANO | dirigent IT |; ROBERTO BONETTO | organ IT |;
+              <br>LUCIA BYRÁKOVÁ | soprán SK |; TRNAVSKÝ KOMORNÝ ORCHESTER | SK |;
+              <br>ALŽBETA ŠEVEČKOVÁ | koncertná majsterka SK |; MIEŠANÝ SPEVÁCKY ZBOR TIRNAVIA | SK |; MICHAL STAHL | zbormajster SK |</h6>
+            <p class="programme-meta"><time>10.09.</time> 19:30</p>
+            <p class="programme-venue"><em>Katedrála svätého Martina, Bratislava</em></p>
+          </article>
 
         </div>
       </div>
 
-      <hr>
+      <!-- <hr class="programme-divider"> -->
 
-      <div class="d-flex justify-content-center align-items-center">
-
-        <div class="col-lg-2 bull-ster" data-aos="fade-up" data-aos-duration="500">
-          <div class="resume-item">
-            <h4 class="d-flex justify-content-center align-items-center">Plagát 2025</h4>
-            <a href="assets/pdf/KOF-2025_SK.pdf" class="glightbox" data-height="95vh" data-width="90vw" data-gallery="Poster"><img src="assets/img/archiv/KOF-2024_SK.webp" class="img-fluid" alt=""></a>
-          </div>
+      <!-- <div class="programme-downloads">
+        <div class="programme-download-card" data-aos="fade-up" data-aos-duration="500">
+          <h4>Plagát 2025</h4>
+            <a href="assets/pdf/KOF-2025_SK.pdf" class="glightbox" data-height="95vh" data-width="90vw" data-gallery="Poster"><img src="assets/img/archiv/KOF-2024_SK.webp" class="img-fluid" alt="Plagát KOF 2025"></a>
         </div>
-
-        <div class="col-lg-2 bull-ster" data-aos="fade-up" data-aos-duration="500">
-          <div class="resume-item">
-            <h4 class="d-flex justify-content-center align-items-center">Bulletin 2025</h4>
-            <a href="assets/pdf/KOF-2025.pdf" class="glightbox" data-height="95vh" data-width="90vw" data-gallery="Poster"><img src="assets/img/archiv/KOF-2025-1.webp" class="img-fluid" alt=""></a>
-          </div>
+        <div class="programme-download-card" data-aos="fade-up" data-aos-duration="500">
+          <h4>Bulletin 2025</h4>
+          <a href="assets/pdf/KOF-2025.pdf" class="glightbox" data-height="95vh" data-width="90vw" data-gallery="Poster"><img src="assets/img/archiv/KOF-2025-1.webp" class="img-fluid" alt="Bulletin KOF 2025"></a>
         </div>
-
-      </div>
+      </div> -->
 
     </div>
   </section><!-- Koniec Programu -->
@@ -245,121 +213,106 @@
   <!-- ======= Hotel  ======= -->
   <section id="hotel" class="hotel">
     <div class="container" data-aos="fade-up" data-aos-duration="500">
-
       <div class="section-title">
         <h2>Hotel Devín</h2>
-        <h4>Naši koncertní umelci sú ubytovaní v Hoteli Devín</h4>
-        <p>Príďte aj Vy a vystupňujte svoj hudobný zážitok tým gastronomickým. Vaša vstupenka na Katedrálny organový festival je zároveň kupónom na 10% zľavu na konzumáciu v Café Devín v deň vstupu.</p>
-
+        <p class="hotel-subtitle">Naši koncertní umelci sú ubytovaní v Hoteli Devín</p>
       </div>
-
-      <div class="row d-flex justify-content-center align-items-center" data-aos='fade-up' data-aos-delay='100'>
-
-        <div class="col-lg-4 hotel-img">
-          <a href="assets/pdf/devin.pdf" class="glightbox" data-height="95vh" data-width="90vw" data-gallery="devin"><img src="assets/img/klik.jpg" class="img-fluid" alt=""></a>
+      <div class="hotel-content">
+        <p class="hotel-intro text-center">Príďte aj Vy a vystupňujte svoj hudobný zážitok tým gastronomickým.</p>
+        <div class="hotel-offer">
+          <p>Vaša vstupenka na Katedrálny organový festival je zároveň kupónom na <strong>10&nbsp;% zľavu</strong> na konzumáciu v Café Devín v deň vstupu.</p>
         </div>
-
+        <div class="hotel-card" data-aos="fade-up" data-aos-delay="100">
+          <a href="assets/pdf/devin.pdf" class="glightbox" data-height="95vh" data-width="90vw" data-gallery="devin">
+            <img src="assets/img/klik.jpg" class="img-fluid" alt="Ponuka Hotel Devín">
+            <span class="hotel-card-label">Pozrieť ponuku</span>
+          </a>
+        </div>
       </div>
-
     </div>
   </section> <!-- Koniec Hotel -->
 
   <!-- ======= Organ  ======= -->
   <section id="organ" class="organ">
     <div class="container" data-aos="fade-up" data-aos-duration="500">
-
       <div class="section-title">
         <h2>Organ</h2>
-        <p>„Organ Geralda Woehla pre Bratislavskú katedrálu je zatiaľ posledným osudovým medzníkom slovenskej organovej kultúry. Nie je to len preto, že je najväčším organom postaveným na Slovensku po roku 1989. Je zároveň aj prvým netovárenským organom svojej veľkosti v našej histórii vôbec a prvým organom porovnateľným s najvýznamnejšími európskymi katedrálnymi organmi.“ </p>
-        <p class="p-citat"><b>Stanislav Šurin</b> - iniciátor a manažér stavby katedrálneho organa, riaditeľ festivalu</p>
-        <br>
-        <p>„Nový organ spája otvorom uprostred loď chrámu s oknom v podveží, cez ktoré preniká svetlo, prichádzajúce akoby z večnosti. Vzniká tým harmonická jednota priestoru a hudobného nástroja. Organ sv. Alžbety hudobne nadväzuje na organovú tradíciu v Katedrále sv. Martina. Vychádzajúc z klasického Vierengelovho organa z obdobia vrcholného baroka, pokračujúc romantickým nástrojom z konca 19. storočia k dnešnému organu, na ktorom je možné interpretovať nielen hudbu 20. storočia, ale aj hudbu 3. tisícročia, teda hudbu súčasnosti i budúcnosti. Tento nástroj zosobňuje „európsky organ“.“</p>
-        <p class="p-citat"><b>Gerald Woehl</b> - staviteľ katedrálneho organa</p>
-        <br>
-        <p>„Môžeme sa len tešiť z výstavby nového organa. A keďže tento nástroj stojí na takom prestížnom mieste, ako je Bratislavská katedrála, je dôležité uvedomiť si rozmery tejto iniciatívy. Organ bude slúžiť na sprevádzanie náboženských udalostí farnosti, diecézy, krajiny, ale aj kultúrnemu dianiu. Jeho prítomnosť je pre budúcnosť rozhodujúca a smerodajná. Je pre mňa potešením sledovať uskutočnenie tohto projektu. Som presvedčený, že tento organ sa stane jedným z hlavných bodov hudobného diania na Slovensku.“</p>
-        <p class="p-citat"><b>Olivier Latry</b> – titulárny organista Katedrály Notre-Dame v Paríži</p>
-        <div class="row">
-          <div class="col-lg-6">
-            <hr>
-            <p>Organ v Katedrále sv. Martina v roku 2010 postavila firma Geralda Woehla z Marburgu. Nahradil tak pôvodný organ Vincenta Možného z roku 1880, ktorý mal 2 manuály s 34 registrami, mechanické traktúry a zásuvkové vzdušnice. Má 4 manuály, 74 registrov, mechanickú hraciu a elektrickú registrovú traktúru. Využíva symfonický vzduchový systém (rozdielne tlaky pre pre basovú a diskantovú časť manuálov), ten je možné prepnúť na klasický vzduchový systém (kedy sa vypnú vyrovnávacie klinové mechy). </p>
-          </div>
-          <div class="col-lg-6">
-            <hr>
-            <p>Umiestnenie nového nástroja je pod oblúkom podvežia s priehľadom k západnému mozaikovému oknu. Prospektové píšťalové polia sú čiastočne zdobené ružami. Táto výzdoba má svoj dôvod - ruže pripomínajú zázrak sv. Alžbety, ktorá žila v Bratislave približne pred 800 rokmi. V roku 1228 sa vydala do Durínska, kde sa venovala chorým a opusteným v nemeckom Marburgu. Výnimočnou zhodou okolností je, že nový organ pochádza práve z Marburgu. Z tohto dôvodu tiež nesie meno tejto svätice - organ sv. Alžbety. </p>
-          </div>
-        </div>
       </div>
-      <div class="row d-flex justify-content-center data-aos='fade-up' data-aos-delay='100'">
+      <div class="organ-content">
+        <blockquote class="organ-quote">
+          <p>„Organ Geralda Woehla pre Bratislavskú katedrálu je zatiaľ posledným osudovým medzníkom slovenskej organovej kultúry. Nie je to len preto, že je najväčším organom postaveným na Slovensku po roku 1989. Je zároveň aj prvým netovárenským organom svojej veľkosti v našej histórii vôbec a prvým organom porovnateľným s najvýznamnejšími európskymi katedrálnymi organmi.“</p>
+          <cite>Stanislav Šurin</cite>
+          <span class="organ-quote-role">iniciátor a manažér stavby katedrálneho organa, riaditeľ festivalu</span>
+        </blockquote>
+        <blockquote class="organ-quote">
+          <p>„Nový organ spája otvorom uprostred loď chrámu s oknom v podveží, cez ktoré preniká svetlo, prichádzajúce akoby z večnosti. Vzniká tým harmonická jednota priestoru a hudobného nástroja. Organ sv. Alžbety hudobne nadväzuje na organovú tradíciu v Katedrále sv. Martina. Vychádzajúc z klasického Vierengelovho organa z obdobia vrcholného baroka, pokračujúc romantickým nástrojom z konca 19. storočia k dnešnému organu, na ktorom je možné interpretovať nielen hudbu 20. storočia, ale aj hudbu 3. tisícročia, teda hudbu súčasnosti i budúcnosti. Tento nástroj zosobňuje „európsky organ“.“</p>
+          <cite>Gerald Woehl</cite>
+          <span class="organ-quote-role">staviteľ katedrálneho organa</span>
+        </blockquote>
+        <blockquote class="organ-quote">
+          <p>„Môžeme sa len tešiť z výstavby nového organa. A keďže tento nástroj stojí na takom prestížnom mieste, ako je Bratislavská katedrála, je dôležité uvedomiť si rozmery tejto iniciatívy. Organ bude slúžiť na sprevádzanie náboženských udalostí farnosti, diecézy, krajiny, ale aj kultúrnemu dianiu. Jeho prítomnosť je pre budúcnosť rozhodujúca a smerodajná. Je pre mňa potešením sledovať uskutočnenie tohto projektu. Som presvedčený, že tento organ sa stane jedným z hlavných bodov hudobného diania na Slovensku.“</p>
+          <cite>Olivier Latry</cite>
+          <span class="organ-quote-role">titulárny organista Katedrály Notre-Dame v Paríži</span>
+        </blockquote>
 
-        <div class="col-lg-6 organ-img">
-            <a href="assets/img/organ.jpg" class="glightbox" data-gallery="organ"><img src="assets/img/organ.jpg" class="img-fluid" alt=""></a>
+        <div class="organ-intro row">
+          <div class="col-lg-6 organ-intro-col">
+            <p>Organ v Katedrále sv. Martina v roku 2010 postavila firma Geralda Woehla z Marburgu. Nahradil tak pôvodný organ Vincenta Možného z roku 1880, ktorý mal 2 manuály s 34 registrami, mechanické traktúry a zásuvkové vzdušnice. Má 4 manuály, 74 registrov, mechanickú hraciu a elektrickú registrovú traktúru. Využíva symfonický vzduchový systém (rozdielne tlaky pre pre basovú a diskantovú časť manuálov), ten je možné prepnúť na klasický vzduchový systém (kedy sa vypnú vyrovnávacie klinové mechy).</p>
+          </div>
+          <div class="col-lg-6 organ-intro-col">
+            <p>Umiestnenie nového nástroja je pod oblúkom podvežia s priehľadom k západnému mozaikovému oknu. Prospektové píšťalové polia sú čiastočne zdobené ružami. Táto výzdoba má svoj dôvod - ruže pripomínajú zázrak sv. Alžbety, ktorá žila v Bratislave približne pred 800 rokmi. V roku 1228 sa vydala do Durínska, kde sa venovala chorým a opusteným v nemeckom Marburgu. Výnimočnou zhodou okolností je, že nový organ pochádza práve z Marburgu. Z tohto dôvodu tiež nesie meno tejto svätice - organ sv. Alžbety.</p>
+          </div>
         </div>
 
-        <hr>
+        <div class="organ-visual" data-aos="fade-up" data-aos-delay="100">
+          <a href="assets/img/organ.jpg" class="glightbox organ-card" data-gallery="organ">
+            <img src="assets/img/organ.jpg" class="img-fluid" alt="Organ sv. Alžbety v Katedrále sv. Martina">
+          </a>
+        </div>
 
-        <div class="tech-title">
-          <h3>Základné technické údaje organa</h3>
-          <div class="row">
-            <div class="col-lg-5">
-              <p>- 4 manuály s rozsahom C – a3 (58 tónov);
-                <br>- pedál s rozsahom C – f1 (30 tónov);
-                <br>- zásuvkové vzdušnice;
-                <br>- mechanická hracia traktúra (zavesená);
-                <br>- mechanické spojky pre I., II., III. manuál a Pedál;
-                <br>- elektrické spojky pre IV. manuál;
-                <br>- III. manuál v žalúziovej skrini;
-                <br>- kombinácie Setzer 9 x 999;
-                <br>- symfonický vzduchový systém (tlaky vzduchu sú uvedené v mm vodného stĺpca)
-              </p>
+        <div class="organ-tech">
+          <h3 class="organ-tech-title">Základné technické údaje organa</h3>
+          <div class="organ-tech-grid">
+            <div class="organ-tech-card">
+              <div class="organ-tech-list organ-tech-list--left">
+                <ul>
+                  <li>4 manuály (C – a3, 58 tónov), pedál (C – f1, 30 tónov)</li>
+                  <li>zásuvkové vzdušnice, mechanická hracia traktúra (zavesená)</li>
+                  <li>mechanické spojky I.–III. manuál a Pedál, elektrické pre IV. manuál</li>
+                  <li>III. manuál v žalúziovej skrini</li>
+                  <li>kombinácie Setzer 9 × 999, symfonický vzduchový systém</li>
+                </ul>
+              </div>
             </div>
-            <div class="text-align col-lg-2">
-              <br>
-              <table class="d-flex justify-content-center align-content-center">
-                <tr>
-                    <th></th>
-                    <th>bas</th>
-                    <th>diskant</th>
-                </tr>
-                <tr>
-                    <td>I. HW:</td>
-                    <td>77</td>
-                    <td>85</td>
-                </tr>
-                <tr>
-                    <td>II. OW:</td>
-                    <td>77</td>
-                    <td>85</td>
-                </tr>
-                <tr>
-                    <td>III. SW:</td>
-                    <td>95</td>
-                    <td>105</td>
-                </tr>
-                <tr>
-                    <td>Pedal:</td>
-                    <td>85</td>
-                    <td>-</td>
-                </tr>
-              </table>
-              <br>
+            <div class="organ-tech-card organ-tech-card--table">
+              <div class="organ-tech-table-wrap">
+                <table class="organ-tech-table">
+                  <thead>
+                    <tr><th scope="col"></th><th scope="col">bas</th><th scope="col">diskant</th></tr>
+                  </thead>
+                  <tbody>
+                    <tr><td>I. HW</td><td>77</td><td>85</td></tr>
+                    <tr><td>II. OW</td><td>77</td><td>85</td></tr>
+                    <tr><td>III. SW</td><td>95</td><td>105</td></tr>
+                    <tr><td>Pedal</td><td>85</td><td>–</td></tr>
+                  </tbody>
+                </table>
+              </div>
             </div>
-            <div class="col-lg-5">
-              <p>- vyrovnávacie mechy s možnosťou vypnutia
-                <br>- organové čerpadlo s výkonom 43 m3/min.
-                <br>- najmenšia píšťala: 5 mm (bez nohy)
-                <br>- najväčšia píšťala: 8,23 m
-                <br>- použité materiály: <b>drevo</b> (smrek, borovica, jaseň, dub, javor) | <b>kov</b> (organový kov – zliatina cínu a olova, meď, zinok, striebro, mosadz)
-                <br>- materiál klaviatúr: <b>celé tóny</b> (prírodná kosť) | <b>poltóny</b> (ebenové drevo)
-                <br>- počet píšťal: 4 316 (4053 – kov, 263 – drevo, 712 – jazykové píšťaly)
-                <br>- hmotnosť organu: 9 ton
-              </p>
+            <div class="organ-tech-card">
+              <div class="organ-tech-list organ-tech-list--right">
+                <ul>
+                  <li>vyrovnávacie mechy s možnosťou vypnutia, čerpadlo 43 m³/min</li>
+                  <li>najmenšia píšťala 5 mm, najväčšia 8,23 m</li>
+                  <li>materiály: drevo (smrek, borovica, jaseň, dub, javor), kov (organový kov, meď, zinok, striebro, mosadz)</li>
+                  <li>klaviatúry: celé tóny prírodná kosť, poltóny eben</li>
+                  <li>4 316 píšťal (4 053 kov, 263 drevo, 712 jazykové), hmotnosť 9 ton</li>
+                </ul>
+              </div>
             </div>
-
           </div>
-          <br>
-          <br>
-          <div>
-            <a href="assets/pdf/Dispozicia.pdf" class="glightbox" data-gallery="Archive" data-height="95vh" data-width="90vw"><button>Dispozícia</button></a>
+          <div class="organ-tech-cta">
+            <a href="assets/pdf/Dispozicia.pdf" class="organ-btn glightbox" data-gallery="Archive" data-height="95vh" data-width="90vw">Dispozícia</a>
           </div>
         </div>
       </div>
@@ -404,51 +357,35 @@
   <!-- ======= Kontakt ======= -->
   <section id="contact" class="contact">
     <div class="container" data-aos="fade-up" data-aos-duration="500">
-
       <div class="section-title">
         <h2>Kontakt</h2>
       </div>
-
-      <div class="row d-flex align-content-center justify-content-center">
-
-        <div class="col-lg-4">
-
-          <div class="info">
-
-            <div class="address">
-              <a><i class="bx bx-map"></i></a>
-              <h4>Adresa:</h4>
+      <div class="contact-wrap">
+        <div class="contact-info">
+          <div class="contact-card">
+            <span class="contact-card__icon"><i class="bx bx-map"></i></span>
+            <div class="contact-card__body">
+              <h4>Adresa</h4>
               <p>Rudnayovo námestie 1, 811 01 Bratislava</p>
             </div>
-
           </div>
-
-          <div class="info">
-
-              <div class="email">
-                <a><i class="bx bx-envelope"></i></a>
-                <h4>Email:</h4>
-                <p>kof.bratislava@gmail.com</p>
-              </div>
-
-          </div>
-
-          <div class="info">
-
-            <div class="email">
-              <a><i class="bx bx-envelope"></i></a>
-              <h4>Email č.2:</h4>
-              <p>organfestivals@gmail.com</p>
+          <div class="contact-card">
+            <span class="contact-card__icon"><i class="bx bx-envelope"></i></span>
+            <div class="contact-card__body">
+              <h4>Email</h4>
+              <p><a href="kof.bratislava@gmail.com" class="contact-email-copy" data-email="kof.bratislava@gmail.com">kof.bratislava@gmail.com</a></p>
             </div>
-
           </div>
-
+          <div class="contact-card">
+            <span class="contact-card__icon"><i class="bx bx-envelope"></i></span>
+            <div class="contact-card__body">
+              <h4>Email č. 2</h4>
+              <p><a href="organfestivals@gmail.com" class="contact-email-copy" data-email="organfestivals@gmail.com">organfestivals@gmail.com</a></p>
+            </div>
+          </div>
         </div>
-
-        <div class="mapa col-lg-8" data-aos="fade-up">
-          <div class="row d-flex col-lg-12 justify-content-center data-aos='fade-up' data-aos-delay='100'">
-            <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d21298.16400759727!2d17.106538373015898!3d48.143590042461014!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xc7df5e7779db1add!2sSt.%20Martin&#39;s%20Cathedral!5e0!3m2!1sen!2ssk!4v1644434086188!5m2!1sen!2ssk" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
-          </div>
+        <div class="contact-map" data-aos="fade-up" data-aos-delay="100">
+          <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d21298.16400759727!2d17.106538373015898!3d48.143590042461014!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xc7df5e7779db1add!2sSt.%20Martin&#39;s%20Cathedral!5e0!3m2!1sen!2ssk!4v1644434086188!5m2!1sen!2ssk" allowfullscreen="" loading="lazy" title="Katedrála sv. Martina na mape"></iframe>
         </div>
       </div>
     </div>
@@ -467,7 +404,7 @@
         <div class="col-lg-4 col-md-6">
           <div class="ticket-card" data-aos="fade-up" data-aos-duration="500">
             <h3 class="ticket-card__title">Štandardné koncerty</h3>
-            <p class="ticket-card__dates">24.7., 31.7., 7.8., 14.8., 21.8., 28.8.</p>
+            <p class="ticket-card__dates">30.7., 6.8., 13.8., 20.8., 27.8.</p>
             <ul class="ticket-card__pricing">
               <li>Dospelí <strong>15 €</strong></li>
               <li>Seniori 65+, učitelia (ITIC), študenti (ISIC) <strong>10 €</strong></li>
@@ -475,10 +412,11 @@
             </ul>
           </div>
         </div>
+        
         <div class="col-lg-4 col-md-6">
           <div class="ticket-card ticket-card--highlight" data-aos="fade-up" data-aos-duration="500" data-aos-delay="100">
             <h3 class="ticket-card__title">Gala koncerty</h3>
-            <p class="ticket-card__dates">4.9., 11.9.</p>
+            <p class="ticket-card__dates">3.9., 10.9.</p>
             <ul class="ticket-card__pricing">
               <li>Dospelí <strong>20 €</strong></li>
               <li>Seniori 65+, učitelia (ITIC), študenti (ISIC) <strong>12 €</strong></li>
@@ -486,17 +424,19 @@
             </ul>
           </div>
         </div>
-        <div class="col-lg-4 col-md-6">
+
+        <!-- <div class="col-lg-4 col-md-6">
           <div class="ticket-card" data-aos="fade-up" data-aos-duration="500" data-aos-delay="200">
             <h3 class="ticket-card__title">Koncert v arcidiecéze</h3>
             <p class="ticket-card__dates">31.8. – 15:00, Kostol sv. Margity, Lamač</p>
             <p class="ticket-card__free">Vstup voľný</p>
           </div>
-        </div>
+        </div> -->
+
       </div>
 
       <div class="ticket-cta">
-        <a href="https://www.ticketportal.sk/event/KATEDRALNY-ORGANOVY-FESTIVAL-BRATISLAVA-2025" target="_blank" rel="noopener" class="ticket-btn">
+        <a href="https://www.ticketportal.sk/event/KATEDRALNY-ORGANOVY-FESTIVAL-BRATISLAVA-2026" target="_blank" rel="noopener" class="ticket-btn">
           <span class="ticket-btn__logo"><img src="assets/img/org_spo/Ticketportal.png" alt="Ticketportal"></span>
           <span class="ticket-btn__text">Zakúpiť vstupenky online</span>
         </a>
@@ -513,62 +453,37 @@
         <h2>Organizátori & Sponzori festivalu</h2>
       </div>
 
-      <div class="row justify-content-center">
+      <div class="organizator-grid">
 
-        <div class="column d-flex align-items-center justify-content-center">
-          <img src="assets/img/org_spo/Tribus.png" class="img-fluid" alt="">
+        <div class="organizator-card">
+          <img src="assets/img/org_spo/Tribus.png" alt="Tribus">
         </div>
-
-        <div class="column d-flex align-items-center justify-content-center">
-          <img src="assets/img/org_spo/Bratislavska%20arcidieceza.png" class="img-fluid" alt="">
+        <div class="organizator-card">
+          <img src="assets/img/org_spo/Bratislavska%20arcidieceza.png" alt="Bratislavská arcidiecéza">
         </div>
-
-        <div class="column d-flex align-items-center justify-content-center">
-          <img src="assets/img/org_spo/fond.png" class="img-fluid" alt="">
+        <div class="organizator-card">
+          <img src="assets/img/org_spo/fond.png" alt="Fond na podporu umenia">
         </div>
-
-        <div class="column d-flex align-items-center justify-content-center">
-          <img src="assets/img/org_spo/AXXENCE.png" class="img-fluid" alt="">
+        <div class="organizator-card">
+          <img src="assets/img/org_spo/AXXENCE.png" alt="Axxence">
         </div>
-
-        <div class="column d-flex align-items-center justify-content-center">
-          <img src="assets/img/org_spo/Orgues%20atelier.png" class="img-fluid" alt="">
+        <div class="organizator-card">
+          <img src="assets/img/org_spo/Orgues%20atelier.png" alt="Orgues atelier">
         </div>
-
-        <!-- <div class="column d-flex align-items-center justify-content-center">
-          <img src="assets/img/org_spo/BKIS.png" class="img-fluid" alt="">
-        </div> -->
-
-        <div class="column d-flex align-items-center justify-content-center">
-          <img src="assets/img/org_spo/Hotel%20Devin.png" class="img-fluid" alt="">
+        <div class="organizator-card">
+          <img src="assets/img/org_spo/Hotel%20Devin.png" alt="Hotel Devín">
         </div>
-
-        <!-- <div class="column d-flex align-items-center justify-content-center">
-          <img src="assets/img/org_spo/Embajada%20de%20Espana.png" class="img-fluid" alt="">
-        </div> -->
-
-        <div class="column d-flex align-items-center justify-content-center">
-          <img src="assets/img/org_spo/Lamac.png" class="img-fluid" alt="">
+        <div class="organizator-card">
+          <img src="assets/img/org_spo/Lamac.png" alt="Lamac">
         </div>
-
-        <div class="column d-flex align-items-center justify-content-center">
-          <img src="assets/img/org_spo/Polsky%20institut%20BA.png" class="img-fluid" alt="">
+        <div class="organizator-card">
+          <img src="assets/img/org_spo/Polsky%20institut%20BA.png" alt="Poľský inštitút v Bratislave">
         </div>
-
-        <!-- <div class="column d-flex align-items-center justify-content-center">
-          <img src="assets/img/org_spo/Amici%20Dell%20Organo.png" class="img-fluid" alt="">
-        </div> -->
-
-        <!-- <div class="column d-flex align-items-center justify-content-center">
-          <img src="assets/img/org_spo/TM.png" class="img-fluid" alt="">
-        </div> -->
-
-        <div class="column d-flex align-items-center justify-content-center">
-          <img src="assets/img/org_spo/INVINI.jpg" class="img-fluid" alt="">
+        <div class="organizator-card">
+          <img src="assets/img/org_spo/INVINI.jpg" alt="Invini">
         </div>
-
-        <div class="column d-flex align-items-center justify-content-center">
-          <img src="assets/img/org_spo/teraz.webp" class="img-fluid" alt="">
+        <div class="organizator-card">
+          <img src="assets/img/org_spo/teraz.webp" alt="Teraz">
         </div>
 
       </div>
@@ -595,12 +510,13 @@
       <a href="https://www.instagram.com/kof.bratislava/" target="_blank" class="instagram"><i class="bx bxl-instagram"></i></a>
     </div>
 
-    <div class="copyright">
-      &copy; <script>document.write(new Date().getFullYear());</script> <strong><span>Katedrálny organový festival Bratislava</span></strong>. Všetky práva vyhradené.
-    </div>
-
-    <div class="credits">
-      Website was designed and developed by <a href="https://www.linkedin.com/in/matúš-masár-b1b6981a3/" target="_blank">Matúš Masár</a>
+    <div class="footer-bottom">
+      <div class="copyright">
+        &copy; <script>document.write(new Date().getFullYear());</script> <strong><span>Katedrálny organový festival Bratislava</span></strong>. Všetky práva vyhradené.
+      </div>
+      <div class="credits">
+        Website designed and developed by <a href="https://www.linkedin.com/in/masarmatthew/" target="_blank" rel="noopener">Matúš Masár</a>
+      </div>
     </div>
 
   </div>
