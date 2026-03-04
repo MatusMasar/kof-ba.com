@@ -314,4 +314,16 @@
       });
     });
   }
+
+  /**
+   * Programme cards: wrap country codes in spans for styling
+   * Matches both "| KÓD |" and "| nástroj KÓD |" (and end of string)
+   */
+  const programmeH6 = document.querySelectorAll('.programme-card h6');
+  programmeH6.forEach(function(el) {
+    let html = el.innerHTML;
+    html = html.replace(/\s+([A-Z]{2,3})\s*\|/g, ' <span class="programme-country">$1</span> |');
+    html = html.replace(/\s+([A-Z]{2,3})\s*$/gm, ' <span class="programme-country">$1</span>');
+    el.innerHTML = html;
+  });
 });

@@ -601,12 +601,41 @@ section {
 }
 
 /* Programme list & cards */
-.programme-list {
+.programme-list-wrap {
   margin-top: 2rem;
+}
+.programme-list-intro {
+  display: none;
+  max-width: 520px;
+  margin: 0 auto 1.5rem;
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #565759;
+  text-align: center;
+}
+.programme-list-wrap.programme-list--names-hidden .programme-list-intro {
+  display: block;
+}
+.programme-list-wrap.programme-list--names-hidden .programme-card h4 {
+  display: none;
+}
+.programme-list-wrap.programme-list--names-hidden .programme-card {
+  text-align: center;
+}
+.programme-list-wrap.programme-list--names-hidden .programme-card h6 {
+  text-align: left;
+  max-width: 100%;
+}
+.programme-list-wrap.programme-list--names-hidden .programme-meta {
+  font-size: 1.1rem;
+  padding: 0.5rem 1rem;
+}
+.programme-list {
+  margin-top: 0;
   gap: 0;
 }
-.programme-list--names-hidden .programme-card h4 {
-  display: none;
+.programme-list-wrap .programme-list {
+  margin-top: 0;
 }
 .col-programme {
   margin-bottom: 1.25rem;
@@ -634,14 +663,31 @@ section {
   line-height: 1.3;
 }
 .programme-card h6 {
-  font-size: 0.8rem;
-  font-weight: 600;
-  text-transform: uppercase;
-  letter-spacing: 0.02em;
+  font-size: 0.9rem;
+  font-weight: 500;
+  text-transform: none;
+  letter-spacing: 0.01em;
   color: #565759;
-  margin: 0 0 0.75rem;
-  line-height: 1.45;
-  opacity: 0.95;
+  margin: 0 0 0.85rem;
+  padding: 0.65rem 0 0.65rem 0.9rem;
+  line-height: 1.6;
+  border-left: 3px solid rgba(187, 167, 117, 0.5);
+  background: rgba(187, 167, 117, 0.06);
+  border-radius: 0 6px 6px 0;
+}
+.programme-card h6:last-child {
+  margin-bottom: 0;
+}
+.programme-country {
+  display: inline-block;
+  font-size: 0.7rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  color: #8f7d4a;
+  background: rgba(187, 167, 117, 0.2);
+  padding: 0.2em 0.5em;
+  border-radius: 4px;
+  margin: 0 0.1em;
 }
 .programme-meta {
   display: inline-block;
